@@ -59,10 +59,10 @@ jobs:
       - name: Commit PNG
         id: commit
         run: |
-          git config --local user.email "action[bot]@github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "shanutiwari1010.work@gmail.com"
+          git config --local user.name "Shanut Tiwari"
           git add public/resume
-          git commit -m "[bot] updated png and pdf"
+          git commit -m "update(assets): resume png and pdf"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
