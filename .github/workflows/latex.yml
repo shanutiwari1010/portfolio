@@ -54,20 +54,21 @@ jobs:
           cp resume.pdf public/resume/
           cp resume.png public/resume/
 
-      # - name: Commit PNG
-      #   id: commit
-      #   run: |
-      #     git config --local user.email "action[bot]@github.com"
-      #     git config --local user.name "github-actions[bot]"
-      #     git add public/resume
-      #     git commit -m "[bot] updated png and pdf"
-
-      - name: Commit and Push Changes
+      - name: Commit PNG
+        id: commit
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
+          git config --local user.email "action[bot]@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/resume
           git commit -m "[bot] updated png and pdf"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push origin main
+
+      # - name: Commit and Push Changes
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git add .
+      #     git commit -m "[bot] updated png and pdf"
+      #     git push
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
