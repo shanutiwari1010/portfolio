@@ -65,6 +65,6 @@ jobs:
           git commit -m "update(assets): resume png and pdf"
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.LATEX_TOKEN }}
+        id: push
+        run: | 
+          git push https://shanutiwari1010:${{ secrets.LATEX_TOKEN }}@github.com/shanutiwari1010/portfolio.git HEAD:main
