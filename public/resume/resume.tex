@@ -1,0 +1,250 @@
+%------------------------
+  % Resume in Latex
+  % Author: Jake Gutierrez
+  % Based off of: https://github.com/sb2nov/resume
+  % License: MIT
+  %------------------------
+
+  \documentclass[letterpaper,11pt]{article}
+
+  \usepackage{latexsym}
+  \usepackage[empty]{fullpage}
+  \usepackage{titlesec}
+  \usepackage{marvosym}
+  \usepackage[usenames,dvipsnames]{color}
+  \usepackage{verbatim}
+  \usepackage{enumitem}
+  \usepackage[hidelinks]{hyperref}
+  \usepackage{fancyhdr}
+  \usepackage[english]{babel}
+  \usepackage{tabularx}
+  \usepackage{fontawesome5}
+  \usepackage{multicol}
+  \setlength{\multicolsep}{-3.0pt}
+  \setlength{\columnsep}{-1pt}
+  \input{glyphtounicode}
+  \usepackage{ragged2e}
+
+  \usepackage{xcolor}
+  \hypersetup{colorlinks,urlcolor=blue}
+
+
+  %----------FONT OPTIONS----------
+  % sans-serif
+  % \usepackage[sfdefault]{FiraSans}
+  % \usepackage[sfdefault]{roboto}
+  % \usepackage[sfdefault]{noto-sans}
+  % \usepackage[default]{sourcesanspro}
+
+  % serif
+  % \usepackage{CormorantGaramond}
+  \usepackage{charter}
+
+
+  \pagestyle{fancy}
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+  % Adjust margins
+  \addtolength{\oddsidemargin}{-0.7in}
+  \addtolength{\evensidemargin}{-0.7in}
+  \addtolength{\textwidth}{1in}
+  \addtolength{\topmargin}{-.7in}
+  \addtolength{\textheight}{1.0in}
+
+  \urlstyle{same}
+
+  \raggedbottom
+  \raggedright
+  \setlength{\tabcolsep}{0in}
+
+  % Sections formatting
+  \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+  % Ensure that generate pdf is machine readable/ATS parsable
+  \pdfgentounicode=1
+
+  %-------------------------
+  % Custom commands
+  \newcommand{\resumeItem}[1]{
+    \item\small{
+      {#1 \vspace{-2pt}}
+    }
+  }
+  \hypersetup{%
+    colorlinks=true,% hyperlinks will be colored
+    linkcolor=blue,% hyperlink text will be green
+    linkbordercolor=blue,% hyperlink border will be red
+  }
+
+  \newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4}\\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeCertheading}[2]{
+    \vspace{5pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & #2 \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeEduheading}[5]{
+    \vspace{2pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4}\\
+        \textit{\small#5} \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeSubSubheading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeProjectHeading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+      \end{tabular*}\vspace{-7pt}
+  }
+
+  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+  \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+  \newcommand{\resumeItemListStart}{\begin{itemize}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+  %-------------------------------------------
+  %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+  \textbf{\Huge \scshape Shanu Tiwari} \\ \vspace{1pt}
+  \href{tel:7879810036}{+91 7879810036} $|$
+  {Indore, India} $|$
+  {Frontend Developer} $|$
+  \href{mailto:shanutiwari.work@gmail.com}{shanutiwari.work@gmail.com} \\ \vspace{1pt}
+
+  \href{https://linkedin.com/in/shanutiwari1010}{\underline{linkedin.com/in/shanutiwari1010}} $|$
+  \href{https://github.com/shanutiwari1010}{\underline{github.com/shanutiwari1010}} $|$
+  \href{https://twitter.com/shanutiwari1010}{\underline{twitter.com/shanutiwari1010}}$|$
+   \href{https://shanutiwari.me/}{\underline{shanutiwari.me}} 
+  
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduheading
+{Medi-Caps University}{Indore, Madhya Pradesh}
+{Bachelor of Technology in Computer Science and Engineering}{September 2020 -- July 2024}
+{CGPA: 8.7/10}
+\resumeEduheading
+{Sanskar Academy, CBSE}{Pachore, Madhya Pradesh}
+{12th, Mathematics}{April 2018 -- July 2020}
+{Percentage: 87\%}
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages}{: \hfill JavaScript, Java, HTML, CSS, SQL \hfill} \\
+        \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React, Redux, NodeJS, SCSS, Tailwind, Bootstrap, Chakra UI \hfill} \\
+        \vspace{3pt}\textbf{Databases}{: \hfill MongoDB, MySQL \hfill} \\
+        \vspace{3pt}\textbf{Platforms/Tools}{: \hfill Vercel, Git, GitHub Pages, Figma \hfill} \\
+        }}
+\end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/spendify-io}{Pocket Money Tracker}\hspace{5pt}}{[HTML,CSS, ReactJS,MongoDB,Express.JS, NodeJS]}}{}
+\resumeItemListStart
+\resumeItem{Pocket Money Tracker is a web application designed for easy and comprehensive financial management.}
+\resumeItem{Using HTML and CSS for a user-friendly interface that looks great on any device.}
+\resumeItem{Pocket Money Tracker is a financial transaction tracking tool that uses React.js for seamless tracking and MongoDB for secure storage and quick data retrieval.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/ayushsoni1010/mapsearchify}{The Style Factory}\hspace{5pt}}{{[HTML, CSS]}}}{}
+\resumeItemListStart
+\resumeItem{reated and implemented a graphical user interface (UI) using HTML and CSS for a fashionable clothing brand.}
+\resumeItem{Responsive design made it possible for customers to shop with ease and explore the newest styles on all devices.}
+\resumeItem{Showcased a trendy clothing brand through a stylish and responsive website, providing an immersive and user-friendly platform for fashion enthusiasts.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/ayushsoni1010/moviemania}{Spotify-clone}\hspace{5pt}}{{[HTML,CSS]}}}{}
+\resumeItemListStart
+\resumeItem{A inspired music streaming clone built with HTML and CSS, replicating the platform’s UI and interactivity
+}
+\resumeItem{Created a responsive design enabling users to effortlessly explore and enjoy the latest music styles on the Spotify clone across all devices.}
+\resumeItem{Presented a trendy music platform with a stylish and responsive website, offering an immersive and user-friendly experience for music enthusiasts on the Spotify clone.}
+
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Trainings/Certifications}
+\resumeSubHeadingListStart
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+\resumeCertheading
+{\textbf{\href{https://fifhtry.com}{Industrial Training}\hspace{5pt}}{{[Machine Learning]}}}{Medicaps University, Indore}
+\resumeItemListStart
+\resumeItem{successfully completed a 6-week online training on Data Science. The training 
+consisted of Introduction to Data Science, Python for Data Science, Understanding the Statistics for Data 
+Science, Predictive Modeling and Basics of Machine Learning, and The Final Project modules. }
+\resumeItemListEnd
+
+\resumeCertheading
+{\textbf{\href{https://magic.app}{Training on Data Science}\hspace{3pt}}}{Internshala}
+\resumeItemListStart
+\resumeItem{successfully completed a 6-week online training on Data Science. The training 
+consisted of Introduction to Data Science, Python for Data Science, Understanding the Statistics for Data 
+Science, Predictive Modeling and Basics of Machine Learning, and The Final Project modules. }
+\resumeItemListEnd
+
+\resumeCertheading
+{\textbf{\href{https://economize.cloud}{Crash Course on python}\hspace{3pt}}{{}}}{coursera}
+\resumeItemListStart
+\resumeItem{Completed a beginner-friendly Python Crash Course on Coursera, mastering the basics of coding and problem-solving in Python}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
