@@ -54,28 +54,28 @@ jobs:
           cp resume.pdf public/resume/
           cp resume.png public/resume/
 
-      - name: Get Time
-        id: time
-        uses: nanzm/get-time-action@v1.1
-        with:
-          timeZone: -7
-          format: "YYYY-MM-DD"
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Resume compiled on ${{ steps.time.outputs.time }}
-          tag_name: ${{ steps.time.outputs.time }}
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./resume.pdf
-          asset_name: resume.pdf
-          asset_content_type: application/pdf
+      # - name: Get Time
+      #   id: time
+      #   uses: nanzm/get-time-action@v1.1
+      #   with:
+      #     timeZone: -7
+      #     format: "YYYY-MM-DD"
+      # - name: Create Release
+      #   id: create_release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     name: Resume compiled on ${{ steps.time.outputs.time }}
+      #     tag_name: ${{ steps.time.outputs.time }}
+      # - name: Upload Release Asset
+      #   id: upload-release-asset
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./resume.pdf
+      #     asset_name: resume.pdf
+      #     asset_content_type: application/pdf
 
       - name: Commit PNG
         id: commit
