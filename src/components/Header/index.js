@@ -11,15 +11,23 @@ const Header = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">Skills</Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
-            <Link href="/about">Contact</Link>
+            <Link href="/skills">Skills</Link>
+          </li>
+          <li>
+            <Link href="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
 
-      <button className=" bg-orange-600 text-white px-4 py-2 hover:bg-blue-950 border border-none shadow-right shadow-bottom shadow-lg">Contact Now</button>
+      <button className=" bg-orange-600 text-white px-4 py-2 hover:bg-blue-950 border border-none shadow-right shadow-bottom shadow-lg">
+        Contact Now
+      </button>
     </header>
   );
 };
