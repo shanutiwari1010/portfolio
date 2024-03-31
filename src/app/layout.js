@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
-        <h1 className="text-5xl">Hello Shanu Chutiya</h1>
       </body>
     </html>
   );
