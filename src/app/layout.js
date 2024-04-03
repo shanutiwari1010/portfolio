@@ -14,10 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
-<<<<<<< HEAD
         <h1 className="text-5xl">Hello Shanu</h1>
-=======
->>>>>>> a86832793e5002a2883fe4b6c76ad9572dc5084a
       </body>
     </html>
   );
