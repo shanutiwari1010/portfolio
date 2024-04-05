@@ -3,9 +3,9 @@ import Link from 'next/link';
 function Button({ text, path}) {
   const nav = `/${path}`;
   return (
-    <div>
+    <div className=' mt-8'>
       <Link href= {nav} >
-        <button className="bg-orange-600 text-white px-4 py-2 hover:bg-blue-950 border border-none shadow-right shadow-bottom shadow-lg btn">
+        <button className="bg-orange-600 text-white px-4 py-2 hover:bg-blue-950 border border-none shadow-right shadow-bottom shadow-lg btn uppercase">
           {text}
         </button>
       </Link>

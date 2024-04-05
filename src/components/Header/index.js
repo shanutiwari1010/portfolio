@@ -1,12 +1,10 @@
-// components/Header.js
-
 import Link from "next/link";
 import Button from "../Button/index.jsx";
 
 const Header = () => {
   return (
-    <header className="flex justify-evenly bg-white p-4 items-center">
-      <nav>
+    <header className="flex justify-evenly p-2 items-center ">
+      <nav >
         <ul className="flex justify-center gap-10 bg-rgb(255,247,237)">
           <li>
             <Link href="/">Home</Link>
