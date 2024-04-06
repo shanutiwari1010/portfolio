@@ -2,18 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
-nav ul li a {
+/* styles.css */
+.font nav ul li a {
   color: black; /* Default color */
   text-decoration: none;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: orange; /* Color on hover and when link is active */
+  @apply text-purple-500;
 }
 
+@layer base {
+  html {
+    font-family: "Jost", system-ui, sans-serif;
+  }
+}
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

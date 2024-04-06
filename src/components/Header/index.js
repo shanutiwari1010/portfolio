@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="flex justify-evenly p-2 items-center ">
       <nav >
-        <ul className="flex justify-center gap-10 bg-rgb(255,247,237)">
+        <ul className="flex justify-center gap-10 uppercase">
           <li>
             <Link href="/">Home</Link>
           </li>
