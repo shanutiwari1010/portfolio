@@ -3,7 +3,7 @@ import Link from "next/link";
 function Button({ text, path, variant = "primary" }) {
   const nav = `/${path}`;
   return (
-    <div className="mt-8">
+    <div className="">
       <Link href={nav}>
         <button
           className={`text-white uppercase tracking-wide ${
