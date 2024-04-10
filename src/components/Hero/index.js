@@ -3,7 +3,7 @@ import Button from "../Button/index.jsx";
 
 function Hero() {
   return (
-    <div className="h-screen flex items-center justify-between pl-20">
+    <div className="h-screen flex items-center justify-between pl-20 bg-primary">
       <div className="relative -top-20">
         <h6 className="text-black font-[500] uppercase">
           👋, My name is Shanu
@@ -23,7 +23,7 @@ function Hero() {
             repeat={Infinity}
           />
         </h1>
-        <p className="text-gray-600 pt-5">Based in Indore, India.</p>
+        <p className="text-gray-600 py-5">Based in Indore, India.</p>
         <Button text="Let's Start" path="contact" />
       </div>
       <div>
