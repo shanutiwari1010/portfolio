@@ -1,11 +1,22 @@
 import Link from "next/link";
 import Button from "../Button/index.jsx";
+import Image from 'next/image'
+
+
 
 const Header = () => {
   return (
-    <header className="fixed flex justify-evenly items-center p-2 w-full ">
-      <nav >
-        <ul className="flex justify-center gap-10 uppercase">
+    <header className="fixed flex justify-between px-10 items-center py-5 z-50 shadow-sm w-full backdrop-blur-md bg-white/50">
+      <nav className="flex gap-10 items-center">
+        <div>
+          <Image 
+           src='/logo.svg'
+           width={150}
+           height={150}
+           alt="logo"
+           />
+        </div>
+        <ul className="flex justify-center gap-10 uppercase font-medium">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -30,8 +41,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-

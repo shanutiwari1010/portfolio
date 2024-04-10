@@ -1,12 +1,12 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -19,7 +19,11 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "primary": ["Jost",...defaultTheme.fontFamily.sans],
+        primary: ["Jost", ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        primary:
+          "url('https://uiocean.com/themeforest/react/krinky-tailwind/img/effect/bg-effect-1.png')",
       },
       keyframes: {
         "accordion-down": {
@@ -38,4 +42,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

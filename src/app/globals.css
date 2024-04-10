@@ -12,7 +12,7 @@
 
 nav ul li a:hover,
 nav ul li a.active {
-  @apply text-purple-500;
+  @apply text-orange-600;
 }
 
 @layer base {
