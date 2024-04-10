@@ -3,12 +3,12 @@ import Button from "../Button/index.jsx";
 
 function Hero() {
   return (
-    <div className="h-screen flex items-center justify-between mb-0">
+    <div className="h-screen flex items-center justify-between pl-20">
       <div className="relative -top-20">
         <h6 className="text-black font-[500] uppercase">
           👋, My name is Shanu
         </h6>
-        <h1 className="text-black font-[700} text-4xl lg:text-[40px] pt-10">
+        <h1 className="text-black font-semibold text-4xl lg:text-[40px] pt-10">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
