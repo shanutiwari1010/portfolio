@@ -3,7 +3,7 @@ import Button from "../Button/index.jsx";
 
 const Header = () => {
   return (
-    <header className="flex justify-evenly p-2 items-center ">
+    <header className="fixed flex justify-evenly items-center p-2 w-full ">
       <nav >
         <ul className="flex justify-center gap-10 uppercase">
           <li>
@@ -30,3 +30,8 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
