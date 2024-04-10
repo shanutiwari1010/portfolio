@@ -2,7 +2,7 @@
 
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
-import About from "@/app/about/page";
+
 import Skills from "@/app/skills/page";
 import Section from "@/components/Section";
 
@@ -14,10 +14,9 @@ export default function Home() {
     >
       <Header />
       <Hero />
-      <About />
-      <Skills/>
-      <Section />
 
+      <Skills />
+      <Section />
     </div>
   );
 }
