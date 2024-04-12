@@ -36,8 +36,8 @@ function Projects() {
   ];
 
   return (
-    <div className="flex flex-col gap-10 max-w-screen-2xl md:px-20 px-4 py-40 flex-wrap bg-orange-50">
-      <h1 className="text-4xl font-semibold uppercase">My Projects</h1>
+    <div className="flex flex-col gap-24 max-w-screen-2xl md:px-20 px-4 py-40 flex-wrap bg-orange-50">
+      <h1 className="text-5xl text-center font-semibold uppercase text-black drop-shadow-xl">My Projects</h1>
       <div className="flex flex-wrap gap-10">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
@@ -54,15 +54,15 @@ function Projects() {
                 alt="img"
                 className={`${
                   isEven
-                    ? "hover:shadow-[-5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]"
-                    : "hover:shadow-[5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]"
-                }`}
+                    ? "shadow-[-5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]"
+                    : "shadow-[5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]"
+                } border-2 border-black hover:shadow-inner`}
                 width={400}
                 height={400}
               />
               <div className="space-y-6">
                 <h2 className="font-semibold text-3xl">{project.title}</h2>
-                <ul className="space-y-2 list-disc w-full">
+                <ul className="space-y-2 list-disc w-full list-inside">
                   {project.description.map((description) => {
                     return (
                       <div>
