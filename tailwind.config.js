@@ -23,8 +23,9 @@ module.exports = {
       },
       backgroundImage: {
         primary:
-          "url('https://uiocean.com/themeforest/react/krinky-tailwind/img/effect/bg-effect-1.png')",
+          "url('/assets/bg-hero.png')",
       },
+      
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
