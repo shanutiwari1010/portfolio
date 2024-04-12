@@ -7,7 +7,9 @@ const Header = () => {
     <header className="fixed flex justify-between px-10 items-center py-5 z-50 shadow-sm w-full backdrop-blur-md bg-white/50">
       <nav className="flex gap-20 items-center">
         <div>
-          <Image src="/assets/logo.svg" width={150} height={150} alt="logo" />
+          <Link href="/">
+            <Image src="/assets/logo.svg" width={150} height={150} alt="logo" />
+          </Link>
         </div>
         <ul className="flex justify-center gap-10 uppercase font-medium">
           <li>
