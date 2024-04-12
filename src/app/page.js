@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Header from "@/components/Header";
 import Skills from "@/components/SkillCard";
 import Section from "@/components/Section";
+import Projects from "./projects/page";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Section />
+      <Projects/>
     </div>
   );
 }
