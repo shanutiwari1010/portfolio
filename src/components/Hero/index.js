@@ -1,13 +1,11 @@
 import { TypeAnimation } from "react-type-animation";
 import Button from "../Button/index.jsx";
-
+import Image from "next/image.js";
 function Hero() {
   return (
-    <div className="h-screen flex items-center justify-between px-20 bg-primary">
-      <div className="">
-        <h6 className="text-black font-[500] uppercase">
-          👋 My name is Shanu
-        </h6>
+    <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
+      <div className="w-full">
+        <h6 className="text-black font-[500] uppercase">👋 My name is Shanu</h6>
         <h1 className="text-black font-semibold text-4xl lg:text-[40px] pt-10">
           <TypeAnimation
             sequence={[
@@ -26,8 +24,61 @@ function Hero() {
         <p className="text-gray-600 py-5">Based in Indore, India.</p>
         <Button text="Let's Start" path="contact" />
       </div>
-      <div>
-        <img></img>
+      <div className="images-wrapper w-[45rem]">
+        {/* 1st */}
+        <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 top-40 right-80">
+          <Image
+            alt="img"
+            width={400}
+            height={400}
+            src="/next.svg"
+            style={{ color: "transparent" }}
+          />
+        </div>
+
+        {/*  2nd  */}
+        <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-20 top-40">
+          <Image
+            alt="img"
+            width={400}
+            height={400}
+            src="/next.svg"
+            style={{ color: "transparent" }}
+          />
+        </div>
+
+        {/* 3rd */}
+        <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-80 ">
+          <Image
+            alt="img"
+            width={400}
+            height={400}
+            src="/next.svg"
+            style={{ color: "transparent" }}
+          />
+        </div>
+
+        {/* 4th */}
+        <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-20 top-96">
+          <Image
+             alt="img"
+             width={400}
+             height={400}
+             src="/next.svg"
+             style={{ color: "transparent" }}
+          />
+        </div>
+
+        {/* 5th */}
+        <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute right-56 top-64 ">
+          <Image
+            alt="img"
+            width={400}
+            height={400}
+            src="/next.svg"
+            style={{ color: "transparent" }}
+          />
+        </div>
       </div>
     </div>
   );
