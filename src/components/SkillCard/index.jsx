@@ -16,7 +16,6 @@ import { FaBootstrap } from "react-icons/fa";
 import { SiRedis } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 
-
 function SkillCard() {
   const skills = [
     {
@@ -124,8 +123,8 @@ function SkillCard() {
   ];
 
   return (
-    <div className="flex flex-col gap-10 max-w-screen-2xl md:px-20 px-4 my-20 flex-wrap ">
-      <h1 className=" text-4xl font-semibold uppercase">My Skills</h1>
+    <div className="flex flex-col gap-24 max-w-screen-2xl md:px-20 px-4 my-20 flex-wrap ">
+      <h1 className="text-5xl text-center font-semibold uppercase text-black drop-shadow-xl">My Skills</h1>
       <div className="flex flex-wrap max-w-screen-md gap-10 ">
         {skills.map((skill) => {
           return (
