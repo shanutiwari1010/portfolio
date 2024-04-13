@@ -31,7 +31,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/next.svg"
+            src="/assets/IMG20240317194728.jpg"
             style={{ color: "transparent" }}
           />
         </div>
@@ -42,7 +42,8 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/next.svg"
+            src="/assets/IMG_9300-1.jpeg"
+            className="scale-150 relative left-12"
             style={{ color: "transparent" }}
           />
         </div>
@@ -51,9 +52,10 @@ function Hero() {
         <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-80 ">
           <Image
             alt="img"
-            width={400}
-            height={400}
-            src="/next.svg"
+            width={850}
+            height={850}
+            src="/assets/IMG_3071.jpg"
+            className="scale-150 relative left-12"
             style={{ color: "transparent" }}
           />
         </div>
@@ -61,11 +63,11 @@ function Hero() {
         {/* 4th */}
         <div className="w-56 h-56 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-20 top-96">
           <Image
-             alt="img"
-             width={400}
-             height={400}
-             src="/next.svg"
-             style={{ color: "transparent" }}
+            alt="img"
+            width={400}
+            height={400}
+            src="/assets/IMG_9328-1.jpeg"
+            style={{ color: "transparent" }}
           />
         </div>
 
@@ -75,7 +77,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/next.svg"
+            src="/assets/IMG_0834.jpg"
             style={{ color: "transparent" }}
           />
         </div>
