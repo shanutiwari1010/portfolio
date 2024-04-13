@@ -60,16 +60,17 @@ function Contact() {
             <Button text="send message" path="" />
           </form>
         </div>
-        <div className="flex flex-col justigy-center w-full text-white m-20 p-10">
+        <div className="flex flex-col  w-full text-white items-center">
           <Image
             src="/assets/myphoto.jpg"
-            width={250}
-            height={250}
+            width={300}
+            height={300}
             alt="myphoto"
+            className="border-2 border-gray-500"
           />
 
-          <div>
-            <h1>mail</h1>
+          <div className="px-10">
+            <h1 className="uppercase text-gray-400 text-xl font-medium">mail</h1>
             <p>shanutiwari.work@gmail.com</p>
           </div>
         </div>
