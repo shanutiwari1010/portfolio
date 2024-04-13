@@ -1,6 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import Button from "../Button/index.jsx";
 import Image from "next/image.js";
+import { Linkedin, Github, Twitter, Instagram, Mail } from "lucide-react";
+import Link from "next/link.js";
 function Hero() {
   return (
     <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
@@ -22,7 +24,39 @@ function Hero() {
           />
         </h1>
         <p className="text-gray-600 py-5">Based in Indore, India.</p>
-        <Button text="Let's Start" path="contact" />
+        <div className="flex gap-2 pb-4">
+          <Link
+            href="https://www.linkedin.com/in/shanutiwari1010/"
+            className="bg-transparent py-3 hover:-translate-y-3 transition-all duration-300 "
+          >
+            <Linkedin />
+          </Link>
+          <Link
+            href="https://github.com/shanutiwari1010"
+            className="bg-transparent p-3 hover:-translate-y-3 transition-all duration-300 "
+          >
+            <Github />
+          </Link>
+          <Link
+            href="https://twitter.com/shanutiwari1010"
+            className="bg-transparent p-3 hover:-translate-y-3 transition-all duration-300 "
+          >
+            <Twitter />
+          </Link>
+          <Link
+            href="https://www.instagram.com/_.shanuuu.__"
+            className="bg-transparent p-3 hover:-translate-y-3 transition-all duration-300"
+          >
+            <Instagram />
+          </Link>
+          <Link
+            href="https://www.instagram.com/_.shanuuu.__"
+            className="bg-transparent p-3 hover:-translate-y-3 transition-all duration-300 "
+          >
+            <Mail />
+          </Link>
+        </div>
+        <Button text="hire me" path="mailto:shanutiwari.work@gmail.com" />
       </div>
       <div className="images-wrapper w-[45rem]">
         {/* 1st */}
