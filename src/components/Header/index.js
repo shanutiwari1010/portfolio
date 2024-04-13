@@ -28,7 +28,15 @@ const Header = () => {
         </ul>
       </nav>
 
-      <Button text="Contact me" path="contact" />
+      <div className="flex gap-6">
+        <Button text="Resume" path="/resume" />
+        <Button
+          text="Schedule a call"
+          path="https://cal.com/shanutiwari1010"
+          target="_blank"
+          variant="secondary"
+        />
+      </div>
     </header>
   );
 };
