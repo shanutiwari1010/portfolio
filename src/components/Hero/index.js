@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
       <div className="w-full">
-        <h6 className="text-black font-[500] uppercase">👋 My name is Shanu</h6>
+        <h6 className="text-black text-2xl font-medium">👋 My name is Shanu</h6>
         <h1 className="text-black font-semibold text-4xl lg:text-[40px] pt-10">
           <TypeAnimation
             sequence={[
