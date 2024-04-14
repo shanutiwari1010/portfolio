@@ -65,7 +65,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/assets/IMG20240317194728.jpg"
+            src="/assets/selfie.jpg"
             style={{ color: "transparent" }}
           />
         </div>
@@ -76,7 +76,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/assets/IMG_9300-1.jpeg"
+            src="/assets/citypalace.jpeg"
             className="scale-150 relative left-12"
             style={{ color: "transparent" }}
           />
@@ -88,7 +88,7 @@ function Hero() {
             alt="img"
             width={850}
             height={850}
-            src="/assets/IMG_3071.jpg"
+            src="/assets/laptop.jpg"
             className="scale-150 relative left-12"
             style={{ color: "transparent" }}
           />
@@ -100,7 +100,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/assets/IMG_9328-1.jpeg"
+            src="/assets/sunkissed.jpeg"
             style={{ color: "transparent" }}
           />
         </div>
@@ -111,7 +111,7 @@ function Hero() {
             alt="img"
             width={400}
             height={400}
-            src="/assets/IMG_0834.jpg"
+            src="/assets/mirrorselfie.jpg"
             style={{ color: "transparent" }}
           />
         </div>
