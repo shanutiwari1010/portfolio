@@ -68,9 +68,9 @@ function Projects() {
                 <div className="space-y-6">
                   <h2 className="font-semibold text-3xl">{project.title}</h2>
                   <ul className="space-y-2 list-disc w-full list-inside">
-                    {project.description.map((description) => {
+                    {project.description.map((description, index) => {
                       return (
-                        <div>
+                        <div key={index}>
                           <li>{description}</li>
                         </div>
                       );
