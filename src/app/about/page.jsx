@@ -16,7 +16,7 @@ function page() {
             alt="img"
             width={400}
             height={400}
-            src="/assets/IMG20240317182817-01.jpeg"
+            src="/assets/classic.jpeg"
             className="shadow-[5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]"
             style={{ color: "transparent" }}
           />
