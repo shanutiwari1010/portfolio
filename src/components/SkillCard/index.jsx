@@ -72,12 +72,7 @@ function SkillCard() {
       color: "bg-emerald-200",
       key: "bootstrap",
     },
-    // {
-    //   title: "Shadcn",
-    //   icon: <DiHtml5 className="w-10 h-10" />,
-    //   color: "bg-green-200",
-    //   key: "shadcn",
-    // },
+    
     {
       title: "Nodejs",
       icon: <FaNodeJs className="w-10 h-10" />,
@@ -129,7 +124,7 @@ function SkillCard() {
         {skills.map((skill) => {
           return (
             <div
-              className={`border-2 border-black flex items-center gap-3 p-4 h-32 w-80 ${skill.color} hover:shadow-[5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]`}
+              className={`border-2 border-black flex items-center gap-3 p-4 h-22 w-80 ${skill.color} hover:shadow-[5px_5px_rgba(0.059,_0.090,_0.165,_1.0)]`}
               key={skill.key}
             >
               <div className="border-2 border-black p-4 bg-white">
