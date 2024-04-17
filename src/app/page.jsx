@@ -1,7 +1,7 @@
 "use client";
 
-import Hero from "@/components/Hero";
-import Header from "@/components/Header";
+import Hero from "@/components/Hero/index";
+import Header from "@/components/Header/index";
 import Skills from "@/components/SkillCard";
 import Section from "@/components/Section";
 import Projects from "./projects/page";
