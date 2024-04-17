@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import { Contact } from "lucide-react";
 import React from "react";
 import Image from "next/image";
-import Header from "@/components/Header";
+import Header from "@/components/Header/index";
 import Link from "next/link";
 import { Linkedin, Github, Twitter, Instagram, Mail } from "lucide-react";
 

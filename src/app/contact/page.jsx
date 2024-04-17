@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import Header from "@/components/Header";
+import Header from "@/components/Header/index";
 import Image from "next/image";
 import { useState } from "react";
 function Contact() {
