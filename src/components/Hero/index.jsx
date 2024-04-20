@@ -7,20 +7,28 @@ function Hero() {
   return (
     <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
       <div className="w-full">
-        <h6 className="text-black text-2xl font-medium">👋 My name is Shanu</h6>
-        <h1 className="text-black font-semibold text-4xl lg:text-[40px] pt-10">
+        <h6 className="text-black text-6xl font-black">
+          I'm{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-tr from-orange-400 to-red-500 ">
+            Shanu
+          </span>
+          {"  "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-tr from-orange-400 to-red-500">
+            Tiwari
+          </span>
+        </h6>
+        <h1 className="text-black text-6xl font-black pt-10">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "I'm a Developer ",
+              "Frontend Developer ",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
-              "I'm a Designer",
+              "UI Designer",
               1000,
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
-            repeat={Infinity}
+            repeat={10}
           />
         </h1>
         <p className="text-gray-600 py-5">Based in Indore, India.</p>
