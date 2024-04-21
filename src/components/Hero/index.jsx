@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
       <div className="w-full">
-        <h6 className="text-black text-6xl font-black">
+        <h6 className="text-black text-6xl font-bold">
           I'm{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-tr from-orange-400 to-red-500 ">
             Shanu
@@ -17,7 +17,7 @@ function Hero() {
             Tiwari
           </span>
         </h6>
-        <h1 className="text-black text-6xl font-black pt-10">
+        <h1 className="text-black text-6xl font-bold pt-10">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
