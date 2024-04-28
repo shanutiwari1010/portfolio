@@ -15,6 +15,7 @@ import { FaJava } from "react-icons/fa";
 import { FaBootstrap } from "react-icons/fa";
 import { SiRedis } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
+import Image from "next/image";
 
 function SkillCard() {
   const skills = [
@@ -72,7 +73,7 @@ function SkillCard() {
       color: "bg-emerald-200",
       key: "bootstrap",
     },
-    
+
     {
       title: "Nodejs",
       icon: <FaNodeJs className="w-10 h-10" />,
@@ -118,9 +119,11 @@ function SkillCard() {
   ];
 
   return (
-    <div className="flex flex-col gap-24 max-w-screen-2xl md:px-20 px-4 my-20 flex-wrap ">
-      <h1 className="text-5xl text-center font-semibold uppercase text-black drop-shadow-xl">My Skills</h1>
-      <div className="flex flex-wrap max-w-screen-md gap-10 ">
+    <div className="flex flex-col gap-24 max-w-screen-2xl md:px-20 px-4 my-20 flex-wrap">
+      <h1 className="text-5xl text-center font-semibold uppercase text-black drop-shadow-xl">
+        My Skills
+      </h1>
+      <div className="flex flex-wrap items-center justify-center gap-10 ">
         {skills.map((skill) => {
           return (
             <div
@@ -135,6 +138,15 @@ function SkillCard() {
           );
         })}
       </div>
+      {/* <div className="flex flex-wrap max-w-screen-md">
+        <Image
+          alt="img"
+          width={400}
+          height={400}
+          src="/assets/site_coding_12.jpg"
+          style={{ color: "transparent" }}
+        />
+      </div> */}
     </div>
   );
 }
