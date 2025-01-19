@@ -46,8 +46,8 @@ jobs:
           sudo sed -i "s/$WDT/$WDTR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
-      - name: Convert PDF to PNG
-        run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
+      # - name: Convert PDF to PNG
+      #   run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
 
       - name: Post Processing
         run: |
