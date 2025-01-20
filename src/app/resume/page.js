@@ -3,7 +3,7 @@ export default function Home() {
     <main className="resume-wrapper">
       <div className="h-screen">
         <iframe
-          src="https://shanutiwari.me/resume/resume.pdf"
+          src="https://shanutiwari.com/resume/resume.pdf"
           width="100%"
           height="100%"
         />
