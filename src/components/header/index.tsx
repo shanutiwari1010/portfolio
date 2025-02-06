@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Button from "../Button/index.jsx";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
@@ -29,13 +29,12 @@ const Header = () => {
       </nav>
 
       <div className="flex gap-6">
-        <Button text="Resume" path="/resume" />
-        <Button
-          text="Schedule a call"
-          path="https://cal.com/shanutiwari1010"
-          target="_blank"
-          variant="secondary"
-        />
+        <Link href="/resume">
+          <Button variant="ghost">Resume</Button>
+        </Link>
+        <Link href="https://cal.com/shanutiwari1010" target="_blank">
+          <Button variant="secondary">Schedule a call</Button>
+        </Link>
       </div>
     </header>
   );

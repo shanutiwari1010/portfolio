@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import Button from "../Button/index.jsx";
+import { Button } from "@/components/ui/button";
 import Image from "next/image.js";
 import { Linkedin, Github, Twitter, Instagram, Mail } from "lucide-react";
 import Link from "next/link.js";
@@ -8,7 +8,7 @@ function Hero() {
     <div className="h-screen flex items-center justify-between px-20 bg-primary relative">
       <div className="w-full">
         <h6 className="text-black text-6xl font-bold">
-          I'm{" "}
+          I&apos;m{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-tr from-orange-400 to-red-500 ">
             Shanu
           </span>
@@ -64,7 +64,9 @@ function Hero() {
             <Mail />
           </Link>
         </div>
-        <Button text="hire me" path="mailto:shanutiwari.work@gmail.com" />
+        <Link href="mailto:shanutiwari.work@gmail.com">
+          <Button>Hire Me</Button>
+        </Link>
       </div>
       <div className="images-wrapper w-[45rem]">
         {/* 1st */}
