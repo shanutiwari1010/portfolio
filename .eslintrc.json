@@ -1,0 +1,24 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+  "plugins": ["import", "react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin", // Built-in modules
+          "external", // External modules
+          "internal", // Internal modules
+          "parent", // Parent imports
+          "sibling", // Sibling imports
+          "index" // Index imports
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "desc", "caseInsensitive": true }
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
+  }
+}

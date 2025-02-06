@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Section />
-      <Projects/>
+      <Projects />
       <Footer />
     </div>
   );

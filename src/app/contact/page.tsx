@@ -1,11 +1,11 @@
 "use client";
 
-import Button from "@/components/Button";
-import Header from "@/components/Header/index";
-import Image from "next/image";
+import Header from "@/components/header";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
+
 function Contact() {
-  const [formData, setFormData] = useState({
+  const [, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
@@ -54,19 +54,19 @@ function Contact() {
         name: "Name is required",
       }));
     }
-    if ( error.email) {
+    if (error.email) {
       setError((prev) => ({
         ...prev,
         email: "Email is required",
       }));
     }
-    if ( error.subject) {
+    if (error.subject) {
       setError((prev) => ({
         ...prev,
         subject: "Subject is required",
       }));
     }
-    if ( error.message) {
+    if (error.message) {
       setError((prev) => ({
         ...prev,
         message: "Message is required",
@@ -100,7 +100,7 @@ function Contact() {
                 {error.name && <p>{error.name}</p>}
               </div>
               <div className="flex flex-col gap-2">
-                <label class="form-label">Your Email</label>
+                <label className="form-label">Your Email</label>
                 <input
                   name="Email"
                   id="email"
@@ -113,7 +113,7 @@ function Contact() {
               </div>
             </div>
 
-            <label class="form-label">Subject</label>
+            <label className="form-label">Subject</label>
             <input
               name="Subject"
               id="subject"
@@ -124,7 +124,7 @@ function Contact() {
             />
             {error.subject && <p>{error.subject}</p>}
 
-            <label class="form-label">Your message</label>
+            <label className="form-label">Your message</label>
             <textarea
               name="message"
               id="message"
@@ -137,7 +137,7 @@ function Contact() {
             ></textarea>
             {error.message && <p>{error.message}</p>}
 
-            <Button text="send message" path="" />
+            <Button>Send Message</Button>
           </form>
         </div>
         <div className="flex flex-col  w-full text-white items-center">
