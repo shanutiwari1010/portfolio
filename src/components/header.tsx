@@ -49,7 +49,7 @@ const Header = () => {
     <motion.header
       key={theme}
       ref={headerRef}
-      className="fixed top-0 left-0 right-0 z-50 p-4 h-20 backdrop-blur-sm w-full transition-all dark:text-white"
+      className="fixed top-0 left-0 right-0 z-50 p-4 h-20 backdrop-blur-xs w-full transition-all dark:text-white"
       style={{
         padding: headerPadding,
         borderBottomWidth: "1px",
@@ -59,7 +59,7 @@ const Header = () => {
           theme === "dark" ? darkBackgroundColor : backgroundColor,
       }}
     >
-      <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/">
           <Image src="/brand/logo.svg" width={100} height={100} alt="logo" />
         </Link>
@@ -73,7 +73,7 @@ const Header = () => {
             target="_blank"
             className={cn(
               "hidden md:inline-flex h-9 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground",
-              "shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1",
+              "shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-1",
               "focus-visible:ring-primary"
             )}
           >

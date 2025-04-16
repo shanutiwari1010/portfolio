@@ -28,7 +28,7 @@ const imagesData = [
     width: 400,
     height: 400,
     classes:
-      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-72",
+      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow-sm hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-72",
     additionalStyles: "",
   },
   {
@@ -38,7 +38,7 @@ const imagesData = [
     width: 400,
     height: 400,
     classes:
-      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-14",
+      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow-sm hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-14",
     additionalStyles: "scale-150 relative left-12",
   },
   {
@@ -48,7 +48,7 @@ const imagesData = [
     width: 850,
     height: 850,
     classes:
-      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-72 top-48",
+      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow-sm hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute -rotate-6 right-72 top-48",
     additionalStyles: "scale-150 relative left-12",
   },
   {
@@ -58,7 +58,7 @@ const imagesData = [
     width: 400,
     height: 400,
     classes:
-      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-14 top-48",
+      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow-sm hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute rotate-6 right-14 top-48",
     additionalStyles: "",
   },
   {
@@ -68,7 +68,7 @@ const imagesData = [
     width: 400,
     height: 400,
     classes:
-      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute right-44 top-24",
+      "w-52 h-52 overflow-hidden flex flex-row items-center justify-center shadow-2xl rounded-[52px] border-4 border-black transition-all hover:shadow-sm hover:scale-90 max-xl:w-40 max-xl:h-40 max-lg:w-24 max-lg:h-24 max-xl:rounded-[42px] max-lg:rounded-2xl max-lg:border-2 max-md:hidden absolute right-44 top-24",
     additionalStyles: "",
   },
 ];
@@ -78,7 +78,7 @@ const HeroSection: React.FunctionComponent = () => {
     return imagesData.map((image) => (
       <div
         key={image.id}
-        className={`${image.classes} shadow-2xl border-4 border-black transition-all hover:shadow hover:scale-90`}
+        className={`${image.classes} shadow-2xl border-4 border-black transition-all hover:shadow-sm hover:scale-90`}
       >
         <Image
           src={image.src}
@@ -101,10 +101,10 @@ const HeroSection: React.FunctionComponent = () => {
             href={SOCIAL_URLS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 w-fit rounded-3xl bg-gradient-to-r from-orange-100 to-orange-50/0"
+            className="p-2 w-fit rounded-3xl bg-linear-to-r from-orange-100 to-orange-50/0"
           >
-            <div className="p-1 w-fit rounded-3xl bg-gradient-to-r from-orange-200 to-orange-50/50">
-              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 text-sm font-medium transition hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-700">
+            <div className="p-1 w-fit rounded-3xl bg-linear-to-r from-orange-200 to-orange-50/50">
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 text-sm font-medium transition hover:text-neutral-600 hover:duration-300 dark:hover:text-neutral-700">
                 <span>🎯 Actively Looking for SDE roles</span>
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform duration-300 ease-in-out" />
               </AnimatedShinyText>

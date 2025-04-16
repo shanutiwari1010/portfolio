@@ -74,7 +74,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
                         damping: 25,
                       }}
                       className="inline-block text-transparent bg-clip-text 
-                        bg-gradient-to-r from-neutral-900 to-neutral-700/80 
+                        bg-linear-to-r from-neutral-900 to-neutral-700/80 
                         dark:from-white dark:to-white/80"
                     >
                       {letter}

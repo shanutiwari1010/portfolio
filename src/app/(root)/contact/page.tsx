@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
 
           <div className="mx-auto max-w-xl grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-1">
-            <div className="rounded-2xl border bg-card p-8 shadow-sm">
+            <div className="rounded-2xl border bg-card p-8 shadow-xs">
               <h2 className="text-2xl font-bold">Send Me a Message</h2>
               <p className="mt-2 text-muted-foreground">
                 Fill out the form below and I'll get back to you as soon as

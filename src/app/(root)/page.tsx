@@ -8,7 +8,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       <HeroSection />
       <VibeCodeSection />
-      <section className="my-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
+      <section className="my-16 md:py-24 bg-linear-to-b from-background to-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div>
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
 
           <div className="mt-16 grid gap-8 md:grid-cols-3">
-            <div className="rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+            <div className="rounded-xl border bg-card p-6 shadow-xs transition-all hover:shadow-md">
               <h3 className="text-xl font-semibold text-foreground">
                 Performance Focused
               </h3>
@@ -33,7 +33,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+            <div className="rounded-xl border bg-card p-6 shadow-xs transition-all hover:shadow-md">
               <h3 className="text-xl font-semibold text-foreground">
                 Responsive Design
               </h3>
@@ -43,7 +43,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+            <div className="rounded-xl border bg-card p-6 shadow-xs transition-all hover:shadow-md">
               <h3 className="text-xl font-semibold text-foreground">
                 Modern Architecture
               </h3>

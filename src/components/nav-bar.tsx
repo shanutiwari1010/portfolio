@@ -111,7 +111,7 @@ export function NavBar() {
 
   return (
     <motion.nav
-      className="p-1 rounded-2xl bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-lg border border-border/40 shadow-sm text-sm relative overflow-hidden"
+      className="p-1 rounded-2xl bg-linear-to-b from-background/80 to-background/40 backdrop-blur-lg border border-border/40 shadow-xs text-sm relative overflow-hidden"
       initial="wait"
       whileHover="hover"
     >

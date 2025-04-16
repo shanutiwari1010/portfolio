@@ -140,7 +140,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="max-w-screen-xl mx-auto">{children}</main>
+          <main className="max-w-(--breakpoint-xl) mx-auto">{children}</main>
           <Footer />
           <Toaster/>
         </ThemeProvider>
