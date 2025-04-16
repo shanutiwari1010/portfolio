@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import AccentText from "./accent-text";
+import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
   title: string;
   highlighter?: string;
+  className?: string;
 }
 
 const SectionHeading: React.FC<SectionHeadingProps> = ({
   title,
   highlighter,
+  className,
 }) => {
   let segments: { text: string; highlighted: boolean }[] = [];
   if (highlighter) {
@@ -27,7 +30,12 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   let cumulativeLetterIndex = 0;
 
   return (
-    <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 text-center tracking-tighter">
+    <h1
+      className={cn(
+        "text-5xl sm:text-6xl md:text-7xl font-bold mb-8 text-center tracking-tighter",
+        className
+      )}
+    >
       {segments.map((segment, segmentIndex) => (
         <span key={`segment-${segmentIndex}`} className="inline-block">
           {segment.text.split(" ").map((word, wordIndex, wordArray) => (

@@ -1,22 +1,20 @@
 import HeroSection from "@/components/sections/hero-section";
 import VibeCodeSection from "@/components/sections/vibe-code-section";
+import SectionHeading from "@/components/section-heading";
+import { CTAWrapper } from "@/components/sections/cta-section";
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroSection />
       <VibeCodeSection />
-
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
+      <section className="my-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Complex Problems{" "}
-              <span className="block mt-2 text-2xl sm:text-3xl">
-                <span className="text-muted-foreground">Made</span>{" "}
-                <span className="text-primary">Simple</span>
-              </span>
-            </h2>
+            <div>
+              <SectionHeading title="Complex Problems" />
+              <SectionHeading title="Made Simple" />
+            </div>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               I transform challenging requirements into elegant, user-friendly
               solutions. With a focus on clean code and optimized performance, I
@@ -57,6 +55,14 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <CTAWrapper
+        title="Automate. Simplify. Thrive"
+        imageSrc="/assets/agent-cta-background.webp"
+        imageAlt="Agent CTA Background"
+        buttonLabel="Let's Build Together"
+        buttonHref="/contact"
+        subtitle="Creating something big? Let's talk."
+      />
     </div>
   );
 };
