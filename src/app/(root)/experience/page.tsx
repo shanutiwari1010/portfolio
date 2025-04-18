@@ -4,7 +4,7 @@ import { Briefcase, Calendar, GraduationCap } from "lucide-react";
 import { EXPERIENCE_DATA } from "@/data/experience";
 import { EDUCATION_DATA } from "@/data/education";
 import SectionHeading from "@/components/section-heading";
-import { Spotlight } from "@/components/spotlight";
+import CallToAction from "@/components/call-to-action";
 
 export const metadata: Metadata = {
   title: "Experience",
@@ -118,6 +118,23 @@ const Experience = () => {
           </div>
         </div>
       </section>
+      <CallToAction
+        description="From startups to SaaS — I ship pixel-perfect, scalable UIs with clarity and speed."
+        buttonText="Let's Connect"
+        href="/contact"
+      >
+        <div>
+          <SectionHeading
+            title="Experience That Builds."
+            highlighter="Builds"
+          />
+          <SectionHeading
+            title="Code That Lasts."
+            highlighter="Code"
+            className="-mt-12"
+          />
+        </div>
+      </CallToAction>
     </div>
   );
 };

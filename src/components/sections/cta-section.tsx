@@ -23,10 +23,10 @@ export function CTAWrapper({
   return (
     <section
       id="cta"
-      className="flex flex-col items-center justify-center w-full my-24 md:my-48"
+      className="flex flex-col items-center justify-center w-full my-24 md:my-48 p-4"
     >
       <div className="w-full">
-        <div className="relative z-20 h-[400px] overflow-hidden w-full border border-border rounded-xl bg-linear-to-r from-orange-400 dark:from-orange-300 via-orange-200 dark:via-orange-500 to-orange-400 dark:to-orange-300 shadow-xl">
+        <div className="relative z-20 h-[400px] overflow-hidden w-full border border-border rounded-xl bg-linear-to-r from-orange-100 dark:from-orange-300 via-orange-200 dark:via-orange-500 to-orange-400 dark:to-orange-300 shadow-xl">
           <Image
             src={imageSrc}
             alt={imageAlt}
