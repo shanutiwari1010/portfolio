@@ -2,8 +2,9 @@ import Head from "next/head";
 import type { Metadata, Viewport } from "next";
 import { Inter, Solitreo } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
-// import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "./globals.css";
@@ -142,10 +143,11 @@ export default function RootLayout({
           <Header />
           <main className="max-w-(--breakpoint-xl) mx-auto">{children}</main>
           <Footer />
-          <Toaster/>
+          <Toaster />
         </ThemeProvider>
+        <Analytics />
       </body>
-      {/* <GoogleAnalytics gaId="" /> */}
+      <GoogleAnalytics gaId="G-K8SDJMZE7P" />
     </html>
   );
 }
