@@ -23,12 +23,13 @@ const VibeCodeSection = () => {
       <SectionHeading
         title="Tech Stack, I Vibe Code With"
         highlighter="Vibe Code"
+        className="leading-10"
       />
       <div
         className="relative flex h-[30rem] w-full items-center justify-center overflow-hidden rounded-3xl -mt-20"
         ref={containerRef}
       >
-        <div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
+        <div className="flex size-full max-h-[200px] max-w-xs md:max-w-lg flex-col items-stretch justify-between gap-10">
           {/* Top row */}
           <div className="flex flex-row items-center justify-between">
             <Circle ref={circleRef3}>
