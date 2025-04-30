@@ -17,7 +17,6 @@ const words = [
   "Software Engineer",
   "Frontend Engineer",
   "Developer & Designer",
-  "LLM & AI Engineer",
 ];
 
 const imagesData = [
