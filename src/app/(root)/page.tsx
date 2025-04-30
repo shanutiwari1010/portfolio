@@ -23,7 +23,7 @@ const Home = () => {
             <h1 className="md:text-7xl text-5xl font-solitreo font-bold text-center text-foreground dark:text-white relative z-20">
               Made Simple
             </h1>
-            <div className="w-[30rem] md:w-[40rem] h-20 relative">
+            <div className="w-full md:w-1/2 h-20 relative">
               <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-yellow-500 to-transparent h-[2px] w-3/4 blur-sm" />
               <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-yellow-500 to-transparent h-px w-3/4" />
               <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-[5px] w-1/4 blur-sm" />
