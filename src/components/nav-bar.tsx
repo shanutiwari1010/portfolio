@@ -1,10 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import type * as React from "react";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { Home, User, FolderKanban, Briefcase, ScrollText } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface NavItem {
   icon: React.ReactNode;
@@ -47,14 +46,14 @@ const navItem: NavItem[] = [
       "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
   },
-  // {
-  //   icon: <ScrollText className="h-4 w-4" />,
-  //   label: "Blog",
-  //   href: "/blog",
-  //   gradient:
-  //     "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
-  //   iconColor: "text-blue-500",
-  // },
+  {
+    icon: <ScrollText className="h-4 w-4" />,
+    label: "Blog",
+    href: "/blog",
+    gradient:
+      "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
+    iconColor: "text-blue-500",
+  },
   {
     icon: <User className="h-4 w-4" />,
     label: "Contact",
@@ -89,13 +88,7 @@ const glowVariants = {
 
 const navGlowVariants = {
   initial: { opacity: 0 },
-  hover: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.4, 0, 0.2, 1],
-    },
-  },
+  hover: { opacity: 1, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } },
 };
 
 const sharedTransition = {
@@ -105,23 +98,34 @@ const sharedTransition = {
   duration: 0.5,
 };
 
-export function NavBar() {
+export function NavBar({ isMobile = false }: { isMobile?: boolean }) {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
 
   return (
     <motion.nav
-      className="hidden md:block p-1 rounded-2xl bg-linear-to-b from-background/80 to-background/40 backdrop-blur-lg border border-border/40 shadow-xs text-sm relative overflow-hidden"
+      className={cn(
+        isMobile
+          ? "flex flex-col space-y-4 my-10"
+          : "hidden md:block p-1 rounded-2xl bg-linear-to-b from-background/80 to-background/40 backdrop-blur-lg border border-border/40 shadow-xs text-sm relative overflow-hidden"
+      )}
       initial="wait"
       whileHover="hover"
     >
       <motion.div
-        className={`absolute -inset-2 bg-gradient-radial from-transparent ${
+        className={cn(
+          "absolute -inset-2 bg-gradient-radial from-transparent to-transparent rounded-3xl z-0 pointer-events-none",
           isDarkTheme ? "via-blue-400/30 via-30%" : "via-blue-400/20 via-30%"
-        } to-transparent rounded-3xl z-0 pointer-events-none`}
+        )}
         variants={navGlowVariants}
       />
-      <ul className="flex items-center gap-2 relative z-10">
+      <ul
+        className={
+          isMobile
+            ? "flex flex-col space-y-2"
+            : "flex items-center gap-2 relative z-10"
+        }
+      >
         {navItem.map((item) => (
           <motion.li key={item.label} className="relative">
             <motion.div
@@ -130,15 +134,13 @@ export function NavBar() {
               whileHover="hover"
               initial="initial"
             >
-              <motion.div
-                className="absolute inset-0 z-0 pointer-events-none"
-                variants={glowVariants}
-                style={{
-                  background: item.gradient,
-                  opacity: 0,
-                  borderRadius: "16px",
-                }}
-              />
+              {!isMobile && (
+                <motion.div
+                  className="absolute inset-0 z-0 pointer-events-none rounded-xl"
+                  variants={glowVariants}
+                  style={{ background: item.gradient }}
+                />
+              )}
               <Link href={item.href}>
                 <motion.p
                   className="flex items-center gap-2 px-4 py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
@@ -157,7 +159,6 @@ export function NavBar() {
                   <span>{item.label}</span>
                 </motion.p>
               </Link>
-
               <Link href={item.href}>
                 <motion.p
                   className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
