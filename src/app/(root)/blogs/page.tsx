@@ -1,11 +1,12 @@
 "use client";
+
 import CallToAction from "@/components/call-to-action";
 import SectionHeading from "@/components/section-heading";
 import Image from "next/image";
 import { Button } from "@/components/ui/moving-border";
 import { useRouter } from 'next/navigation';
 
-export const blogs = [
+const blogs = [
   {
     id: 1,
     image: "/assets/getting-started-with-nextjs.png",
@@ -39,7 +40,7 @@ export const blogs = [
   },
 ];
 
-const Blog = () => {
+const Blogs = () => {
   const router = useRouter();
 
   return (
@@ -96,4 +97,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogs;
