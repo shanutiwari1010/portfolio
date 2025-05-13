@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Metadata } from "next";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -29,11 +30,12 @@ const Projects = () => {
               className="group rounded-xl border overflow-hidden bg-card transition-all hover:shadow-lg"
             >
               <div className="aspect-video relative overflow-hidden">
-                <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
-                  <span className="text-lg font-semibold text-primary-foreground">
-                    Image Placeholder
-                  </span>
-                </div>
+                <Image
+                  src={project.image}
+                  alt="project-img"
+                  width={400}
+                  height={400}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-foreground">
