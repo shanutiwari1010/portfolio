@@ -18,14 +18,15 @@ export const PROJECTS_DATA: IProject[] = [
     demo: "https://github.com/shanutiwari1010/reelify",
   },
   {
-    title: "Pocket Money Tracker",
+    title: "Auth Dashboard",
     description:
-      "A personal finance management web app that simplifies expense tracking and budgeting. Built with the MERN stack, including RESTful APIs for transactions and a mobile-friendly UI for managing daily finances effortlessly.",
-    image: "/images/projects/pocket-money-tracker.jpg",
-    tags: ["React", "Node.js", "Express", "MongoDB", "HTML", "CSS"],
-    github: "https://github.com/shanutiwari1010/money-tracker-app",
-    demo: "https://github.com/shanutiwari1010/money-tracker-app",
+      "A complete authentication system featuring secure login, signup, and protected routes using JWT. Includes a sample dashboard with user-specific content and responsive UI. Built with React.js, Shadcn UI and TailwindCSS ,it ensures secure access control and user session management.",
+    image: "/assets/auth-dashboard.png",
+    tags: ["React.js", "TailwindCSS","Shadcn UI"],
+    github: "https://github.com/shanutiwari1010/auth-dashboard-assignment.git",
+    demo: "https://auth-dashboard-assignment.vercel.app",
   },
+ 
   {
     title: "AI Code Reviewer",
     description:
