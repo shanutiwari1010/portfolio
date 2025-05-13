@@ -48,8 +48,8 @@ const navItem: NavItem[] = [
   },
   {
     icon: <ScrollText className="h-4 w-4" />,
-    label: "Blog",
-    href: "/blog",
+    label: "Blogs",
+    href: "/blogs",
     gradient:
       "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "text-blue-500",
