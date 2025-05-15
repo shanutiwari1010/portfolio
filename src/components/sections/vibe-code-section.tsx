@@ -23,7 +23,6 @@ const VibeCodeSection = () => {
       <SectionHeading
         title="Tech Stack, I Vibe Code With"
         highlighter="Vibe Code"
-        className="leading-10"
       />
       <div
         className="relative flex h-[30rem] w-full items-center justify-center overflow-hidden rounded-3xl -mt-20"
