@@ -194,13 +194,13 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <CallToAction
+      {/* <CallToAction
         title="Ready to level up your product with AI?"
         highlighter="AI"
         description="Let's create intelligent, scalable and delightful user experiences together."
         buttonText="Let's Talk"
         href="/contact"
-      />
+      /> */}
     </div>
   );
 }
