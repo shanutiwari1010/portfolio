@@ -4,7 +4,7 @@ import CallToAction from "@/components/call-to-action";
 import SectionHeading from "@/components/section-heading";
 import Image from "next/image";
 import { Button } from "@/components/ui/moving-border";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 const blogs = [
   {
@@ -38,6 +38,14 @@ const blogs = [
       "A deep dive into how Server-Side Rendering and Client-Side Rendering shape user experience in Next.js",
     link: "https://next-wave.hashnode.dev/rendering-methods-in-nextjs-how-html-is-generated-and-delivered",
   },
+  {
+    id: 5,
+    image: "/assets/hydration-in-nextjs.jpeg",
+    title: " Understanding Hydration in Next.js (And Why Hydration Errors Happen)",
+    description:
+      "A Developer's Guide to Understanding Hydration in Next.js and Debugging Common Pitfalls That Lead to Mismatches Between Server and Client HTML.",
+    link: "https://next-wave.hashnode.dev/understanding-hydration-in-nextjs-and-why-hydration-errors-happen",
+  },
 ];
 
 const Blogs = () => {
@@ -45,20 +53,18 @@ const Blogs = () => {
 
   return (
     <div className="pt-32">
-      <section>
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <SectionHeading title="Blogs" highlighter="gs" />
           <p className="mt-4 text-xl text-muted-foreground">
             Insights, tutorials, and stories from my journey in web development
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6">
-         
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map(({ id, image, title, description, link }) => (
             <div
               key={id}
               className="rounded-[22px]  sm:p-10  dark:bg-zinc-900  bg-gray-100 "
-              
             >
               <Image
                 src={image}
@@ -66,7 +72,6 @@ const Blogs = () => {
                 width={400}
                 height={400}
                 className="object-contain rounded-lg hover:scale-110 transition-all duration-75 ease-in-out"
-                
               />
               <p className=" font-semibold sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-2xl">
                 {title}
