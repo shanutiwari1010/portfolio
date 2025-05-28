@@ -41,10 +41,20 @@ const blogs = [
   {
     id: 5,
     image: "/assets/hydration-in-nextjs.jpeg",
-    title: " Understanding Hydration in Next.js (And Why Hydration Errors Happen)",
+    title:
+      " Understanding Hydration in Next.js (And Why Hydration Errors Happen)",
     description:
       "A Developer's Guide to Understanding Hydration in Next.js and Debugging Common Pitfalls That Lead to Mismatches Between Server and Client HTML.",
     link: "https://next-wave.hashnode.dev/understanding-hydration-in-nextjs-and-why-hydration-errors-happen",
+  },
+  {
+    id: 6,
+    image: "/assets/data-fetching.jpeg",
+    title:
+      "Mastering Data Fetching in Next.js: Client vs. Server Components",
+    description:
+      "A Deep Dive into Data Fetching Strategies in Next.js for Optimal Performance and User Experience.",
+    link: "https://next-wave.hashnode.dev/mastering-data-fetching-in-nextjs-client-vs-server-components",
   },
 ];
 
