@@ -49,6 +49,11 @@ const Header = () => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+  setMobileOpen(false); // Close mobile menu on route change
+}, [pathname]);
+
+
   if (!mounted) return null;
 
   if (pathname === "/resume") return null;
