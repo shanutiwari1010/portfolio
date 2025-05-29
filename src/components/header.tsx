@@ -50,7 +50,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-  setMobileOpen(false); // Close mobile menu on route change
+  setMobileOpen(false);
 }, [pathname]);
 
 
