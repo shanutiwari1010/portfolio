@@ -1,65 +1,63 @@
 "use client";
 
-import CallToAction from "@/components/call-to-action";
-import SectionHeading from "@/components/section-heading";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import SectionHeading from "@/components/section-heading";
 import { Button } from "@/components/ui/moving-border";
-import { useRouter } from "next/navigation";
-
-const blogs = [
-  {
-    id: 1,
-    image: "/assets/getting-started-with-nextjs.png",
-    title: "Getting Started with Next.js",
-    description: "A Beginner's Guide to the Modern React Framework",
-    link: "https://next-wave.hashnode.dev/getting-started-with-nextjs-a-beginners-guide-to-the-modern-react-framework",
-  },
-  {
-    id: 2,
-    image: "/assets/nextjs-vs-react.webp",
-    title: "Next.js vs React.js",
-    description:
-      "Understanding how Next.js builds on React to power modern web apps",
-    link: "https://next-wave.hashnode.dev/nextjs-vs-reactjs-whats-the-real-difference",
-  },
-  {
-    id: 3,
-    image: "/assets/routing.jpeg",
-    title: "Routing in Next.js",
-    description:
-      "A complete guide to navigating pages, links, and dynamic routes in Next.js",
-    link: "https://next-wave.hashnode.dev/mastering-routing-in-nextjs-from-basics-to-advanced",
-  },
-  {
-    id: 4,
-    image: "/assets/rendering-methods.png",
-    title: "Rendering Methods in Next.js",
-    description:
-      "A deep dive into how Server-Side Rendering and Client-Side Rendering shape user experience in Next.js",
-    link: "https://next-wave.hashnode.dev/rendering-methods-in-nextjs-how-html-is-generated-and-delivered",
-  },
-  {
-    id: 5,
-    image: "/assets/hydration-in-nextjs.jpeg",
-    title:
-      " Understanding Hydration in Next.js (And Why Hydration Errors Happen)",
-    description:
-      "A Developer's Guide to Understanding Hydration in Next.js and Debugging Common Pitfalls That Lead to Mismatches Between Server and Client HTML.",
-    link: "https://next-wave.hashnode.dev/understanding-hydration-in-nextjs-and-why-hydration-errors-happen",
-  },
-  {
-    id: 6,
-    image: "/assets/data-fetching.jpeg",
-    title:
-      "Mastering Data Fetching in Next.js: Client vs. Server Components",
-    description:
-      "A Deep Dive into Data Fetching Strategies in Next.js for Optimal Performance and User Experience.",
-    link: "https://next-wave.hashnode.dev/mastering-data-fetching-in-nextjs-client-vs-server-components",
-  },
-];
+import CallToAction from "@/components/call-to-action";
 
 const Blogs = () => {
-  const router = useRouter();
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("https://gql.hashnode.com/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            query: `
+              {
+                publication(host: "next-wave.hashnode.dev") {
+                  posts(first: 10) {
+                    edges {
+                      node {
+                        title
+                        brief
+                        slug
+                        coverImage {
+                          url
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          }),
+        });
+
+        const data = await res.json();
+        const posts = data?.data?.publication?.posts?.edges || [];
+
+        const formattedPosts = posts.map(({ node }, index) => ({
+          id: index + 1,
+          title: node.title,
+          description: node.brief,
+          image: node.coverImage?.url || "/assets/default-blog.jpg",
+          link: `https://next-wave.hashnode.dev/${node.slug}`,
+        }));
+
+        setBlogs(formattedPosts);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <div className="pt-32">
@@ -74,7 +72,7 @@ const Blogs = () => {
           {blogs.map(({ id, image, title, description, link }) => (
             <div
               key={id}
-              className="rounded-[22px]  sm:p-10  dark:bg-zinc-900  bg-gray-100 "
+              className="rounded-[22px] sm:p-10 dark:bg-zinc-900 bg-gray-100"
             >
               <Image
                 src={image}
@@ -83,7 +81,7 @@ const Blogs = () => {
                 height={400}
                 className="object-contain rounded-lg hover:scale-110 transition-all duration-75 ease-in-out"
               />
-              <p className=" font-semibold sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-2xl">
+              <p className="font-semibold sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200 text-2xl">
                 {title}
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
@@ -91,7 +89,7 @@ const Blogs = () => {
               </p>
               <Button
                 borderRadius="1.75rem"
-                className=" cursor-pointer text-primary font-medium "
+                className="cursor-pointer text-primary font-medium"
                 onClick={() => window.open(link, "_blank")}
               >
                 Click to Read
@@ -100,6 +98,7 @@ const Blogs = () => {
           ))}
         </div>
       </section>
+
       <CallToAction
         title="Built Together. Made to Perform."
         highlighter="Built Together"
