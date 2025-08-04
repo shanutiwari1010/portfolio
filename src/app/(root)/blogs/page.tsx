@@ -6,6 +6,15 @@ import SectionHeading from "@/components/section-heading";
 import { Button } from "@/components/ui/moving-border";
 import CallToAction from "@/components/call-to-action";
 
+interface BlogPost {
+  title: string;
+  brief: string;
+  slug: string;
+  coverImage?: {
+    url: string;
+  };
+}
+
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -42,13 +51,15 @@ const Blogs = () => {
         const data = await res.json();
         const posts = data?.data?.publication?.posts?.edges || [];
 
-        const formattedPosts = posts.map(({ node }, index) => ({
-          id: index + 1,
-          title: node.title,
-          description: node.brief,
-          image: node.coverImage?.url || "/assets/default-blog.jpg",
-          link: `https://next-wave.hashnode.dev/${node.slug}`,
-        }));
+        const formattedPosts = posts.map(
+          ({ node }: { node: BlogPost }, index: number) => ({
+            id: index + 1,
+            title: node.title,
+            description: node.brief,
+            image: node.coverImage?.url || "/assets/default-blog.jpg",
+            link: `https://next-wave.hashnode.dev/${node.slug}`,
+          })
+        );
 
         setBlogs(formattedPosts);
       } catch (error) {
