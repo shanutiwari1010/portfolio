@@ -150,30 +150,35 @@
   
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeEduheading
-{Medi-Caps University}{Indore, Madhya Pradesh}
-{Bachelor of Technology in Computer Science and Engineering}{August 2020 -- July 2024}
-{CGPA: 8.7/10}
-\resumeEduheading
-{Sanskar Academy, CBSE}{Pachore, Madhya Pradesh}
-{12th, Mathematics}{April 2018 -- July 2020}
-{Percentage: 87\%}
-\resumeSubHeadingListEnd
+
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
         \textbf{Languages}{: \hfill JavaScript, TypeScript, Java, HTML, CSS, SQL \hfill} \\
-        \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React, Redux, Nextjs, Nodejs, Tailwind, Shadcn, Bootstrap, Apexcharts, Firebase \hfill} \\
-        \vspace{3pt}\textbf{Databases/ORM}{: \hfill MySQL, Redis \hfill} \\
-        \vspace{3pt}\textbf{Platforms/Tools}{: \hfill Vercel, Netlify, Postman, Git, NPM, Yarn, Figma \hfill} \\
-        \vspace{3pt}\textbf{Other}{: \hfill WebSocket, GitHub Pages, REST API, Swagger \hfill} \\
+        \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React.js, Next.js, Node.js, Redux, Zod, React Query, Tailwind, Shadcn UI, Bootstrap, Apexcharts, Firebase \hfill} \\
+        \vspace{3pt}\textbf{Databases/ORM}{: \hfill MySQL, MongoDB, NoSQL, Redis \hfill} \\
+        \vspace{3pt}\textbf{Platforms/Tools}{: \hfill Git, GitHub, npm, pnpm, Cursor, Yarn, Vite, Vercel, V0, Netlify, Postman, Figma \hfill} \\
+        \vspace{3pt}\textbf{Other}{: \hfill WebSocket, GitHub Pages, REST API, Swagger, Context API, State Management, Agile Collaboration \hfill} \\
         }}
 \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Medi-Caps University -- Indore, Madhya Pradesh}{CGPA: 8.7/10}
+  {Bachelor of Technology in Computer Science and Engineering}{August 2020 -- July 2024}
+
+\resumeSubheading
+  {Sanskar Academy, CBSE -- Pachore, Madhya Pradesh}{Percentage: 87\%}
+  {12th, Mathematics}{April 2018 -- July 2020}
+
+\resumeSubHeadingListEnd
+
+
 
 % ---------- EXPERIENCE ----------
 
@@ -184,11 +189,12 @@
 {\textbf{\href{https://www.blursday.ai/}{Blursday}\hspace{5pt}}{{[NextJS, ReactJS, TypeScript]}}}{(Remote) Bangalore, India}
 {\textbf{Frontend Engineer – Full time}}{November 2024 - Present }
 \resumeItemListStart
-\resumeItem{Built a dashboard for the Brand Book Generator using Next.js and shadcn/ui, optimizing maintainability with type-safe reusable components and reducing development time by 30\%.
+\resumeItem{Developed a dashboard for the Brand Book Generator using Next.js and shadcn/ui, reducing development time by 30\% with reusable, type safe components.
 }
-\resumeItem{Implemented multi-factor authentication system supporting Google OAuth and OTP login for 10,000+ users, reducing authentication errors by 45\% and improving session security through Firebase, React Hook Form, Zod, and Redux integration
+\resumeItem{Established secure authentication with Google OAuth and OTP via Firebase, cutting login errors by 45\% and improving session security for 10K+ users.
 }
-\resumeItem{Enhanced Figma and Canva plugins with optimized API integrations and improved UI/UX design, achieving 40\% faster load times and implementing Google Analytics/Datadog monitoring that identified 3 critical performance bottlenecks.}
+\resumeItem{Optimized Figma/Canva plugins with better API integration and UI/UX, achieving 40\% faster load times and identifying 3 critical bottlenecks via Google Analytics and Datadog.
+}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -200,7 +206,7 @@
   \resumeItemListStart
     \resumeItem{Built an IoT platform with WebSockets for real-time data, reduced delays by 30\% and enhanced user experience and interaction.}
     \resumeItem{Optimized app performance by 25\% using Shadcn, Redux, and React Query for better state management and faster load times.}
-    \resumeItem{Developed a custom JSON parser and integrated interactive mapping features with Leaflet, improved user engagement by 20\%.}
+    \resumeItem{Architected a custom JSON parser and integrated interactive mapping features with Leaflet, improving user engagement by 20\%.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -214,38 +220,40 @@
 
 \resumeSubHeadingListStart
 \resumeProjectHeading
+{\textbf{\href{https://github.com/shanutiwari1010/genie-ai}{Genie-AI}\hspace{5pt}}{{[Next.js, React Hook Form, Zod, Tailwind]}}}{}
+\resumeItemListStart
+  \resumeItem{Engineered a responsive AI chat app with OTP login and country selector, achieving 90\%+ form accuracy using React Hook Form and Zod.}
+  \resumeItem{Implemented image upload, infinite scroll, and typing indicators with skeleton loaders, reducing perceived latency by 40\%.}
+  \resumeItem{Added dark mode, message copy, and localStorage persistence; deployed on Vercel with full state retention across devices.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/shanutiwari1010/latency-topology-visualizer}{Latency Topology Visualizer}\hspace{5pt}}{{[Next.js, Three.js, TypeScript, Mapbox ]}}}{}
+\resumeItemListStart
+  \resumeItem{Designed 3D latency map with Three.js to visualize 50+ exchange servers across AWS/GCP/Azure, updating every 8s.}
+  \resumeItem{Delivered interactive time-series charts for 15+ pairs, reducing lookup time by 60\% via debounced search and caching.}
+  \resumeItem{Boosted rendering performance by 45\% via frustum culling and LOD, achieving 60 FPS on desktop and 40+ FPS on mobile.
+}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
 {\textbf{\href{https://github.com/shanutiwari1010/reelify}
-{Reelify}\hspace{5pt}}{{[Next.js, MongoDB, NextAuth, imagekit.io, Tailwind CSS, Daisy UI]}}}{}
-\resumeItemListStart
-\resumeItem{Pioneered a full-stack short video platform (Instagram Reels-like) using Next.js and MongoDB, enabling users to upload, like, and comment on videos; drove a 30\% increase in user engagement and extended average session duration by 15+ minutes through interactive features and seamless UX.}
-\resumeItem{Engineered secure authentication using NextAuth.js with role-based access control, reducing unauthorized access attempts by 40\% and cutting account recovery requests by 10\%, significantly improving data privacy and user trust.}
-\resumeItem{Designed and built a responsive, mobile-first UI using Tailwind CSS and DaisyUI, delivering a seamless video browsing experience that contributed to a 20\% increase in session length}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+{Reelify}\hspace{5pt}}{[Next.js, MongoDB, NextAuth, imagekit.io, Tailwind CSS, DaisyUI]}}{}
 
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/shanutiwari1010/money-tracker-app}{Pocket Money Tracker}\hspace{5pt}}{[HTML, CSS, ReactJS, MongoDB, Express.JS, NodeJS]}}{}
 \resumeItemListStart
-\resumeItem{Developed Pocket Money Tracker, a web application that allows for easy and comprehensive money management.}
-\resumeItem{Built transaction APIs for seamless CRUD operations and a scalable backend architecture for transaction tracking.}
-\resumeItem{Designed a user-friendly interface, ensuring a responsive and visually appealing experience across all devices.}
+  \resumeItem{Designed and developed a full-stack short video app with upload, like, and comment features, boosting engagement by 30\%.}
+  \resumeItem{Secured role based auth with NextAuth.js, reduced unauthorized access by 40\% and recovery requests by 10\%.}
+  \resumeItem{Crafted a responsive mobile-first UI with Tailwind and DaisyUI, increasing session length by 20\%.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/shanutiwari1010/portfolio}{AI Code Reviewer}\hspace{5pt}}{{[React.js, TailwindCSS, Node.js ]}}}{}
-\resumeItemListStart
-\resumeItem{Built a web-based code review tool using React.js and Node.js, integrating Google's Gemini 2.0 Flash model to provide instant feedback on code quality, performance, and best practices.}
-\resumeItem{Designed a clean, responsive user interface with TailwindCSS, ensuring optimal usability across various devices and screen sizes.}
-\resumeItem{Enabled seamless code analysis by allowing users to paste code snippets and receive real-time suggestions for readability, bug fixes, and optimization.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
 
-
-%-----------EXPERIENCE-----------
+%-----------TRAININGS/CERTIFICATIONS-----------
 \section{Trainings/Certifications}
 \resumeSubHeadingListStart
 % -----------Multiple Positions Heading-----------
@@ -259,18 +267,24 @@
 %-------------------------------------------
 
 \resumeCertheading
-{\textbf{\href{https://medicaps.ac.in/}{Industrial Training}\hspace{5pt}}{{[Machine Learning]}}}{Medicaps University, Indore}
+{\textbf{\href{https://medicaps.ac.in/}{Industrial Training in Machine Learning}}}{Medicaps University, Indore}
 \resumeItemListStart
 \resumeItem{Completed 6-week Data Science training at Medicaps University, focused on Python, statistics and machine learning}
-\resumeItem{Developed a project using logistic regression in machine learning to recognize MIST images with statistical analysis}
+\resumeItem{Created an MNIST digit recognition model using logistic regression and statistical analysis.}
 \resumeItemListEnd
+
+
 
 \resumeCertheading
 {\textbf{\href{https://coursera.org/verify/FHDUZAK7YL3Q}{Crash Course on Python}\hspace{3pt}}{{}}}{Coursera}
 \resumeItemListStart
-\resumeItem{Mastered Python fundamentals applied in real-world projects, including loops, statements, and data structures.}
-\resumeItem{Developed and implemented Python-based machine learning models in side projects to enhance practical skills.}
+\resumeItem{Gained hands-on experience in Python, data structures, and object-oriented concepts through project-based learning.}
+
+\resumeItem{Applied Python and ML concepts to build real world models in personal projects to enhance practical skills.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+
+
+
 
 \end{document}
