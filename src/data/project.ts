@@ -18,22 +18,22 @@ export const PROJECTS_DATA: IProject[] = [
     demo: "https://github.com/shanutiwari1010/reelify",
   },
   {
-    title: "Auth Dashboard",
+    title: "Latency Topology Visualizer",
     description:
-      "A complete authentication system featuring secure login, signup, and protected routes using JWT. Includes a sample dashboard with user-specific content and responsive UI. Built with React.js, Shadcn UI and TailwindCSS ,it ensures secure access control and user session management.",
-    image: "/assets/auth-dashboard.png",
-    tags: ["React.js", "TailwindCSS","Shadcn UI"],
-    github: "https://github.com/shanutiwari1010/auth-dashboard-assignment.git",
-    demo: "https://auth-dashboard-assignment.vercel.app",
+      "Interactive 3D world map built with Next.js and Three.js that visualizes cryptocurrency exchange servers and real-time latency data across AWS, GCP, and Azure. Features animated connections, historical charts, and filtering controls for trading infrastructure monitoring.",
+    image: "/assets/latency-topology-visualizer.png",
+    tags: ["Next.js", "Three.js", "TypeScript", "Mapbox", "TailwindCSS"],
+    github: "https://github.com/shanutiwari1010/latency-topology-visualizer",
+    demo: "https://latency-topology-visualizer-stats.vercel.app/",
   },
- 
+
   {
-    title: "AI Code Reviewer",
+    title: "Genie-AI",
     description:
-      "A web-based tool that leverages Google's Gemini 2.0 Flash model to review and suggest improvements for your code. Paste your code to receive instant feedback on readability, performance, best practices, and potential bugs. Built with React.js, Node.js and TailwindCSS, it features a clean and responsive UI.",
-    image: "/assets/ai-code-reviewer.png",
-    tags: ["React.js", "TailwindCSS", "Node.js"],
-    github: "https://github.com/shanutiwari1010/AI-code-reviewer",
-    demo: "https://github.com/shanutiwari1010/AI-code-reviewer",
+      "Built a responsive Genie-AI chat app with OTP login, chatroom management, simulated AI replies, and image upload support. Key features include dark mode, reverse infinite scroll, debounced search, and form validation using React Hook Form + Zod. Developed with Next.js, Redux, Tailwind CSS, and deployed on Vercel.",
+    image: "/assets/genie-ai.png",
+    tags: ["Next.js", "React Hook Form", "Zod", "TailwindCSS"],
+    github: "https://github.com/shanutiwari1010/genie-ai",
+    demo: "https://genie-ai-chat.vercel.app/chat",
   },
 ];
