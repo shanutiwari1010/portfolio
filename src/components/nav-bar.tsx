@@ -76,23 +76,16 @@ const backVariants = {
 
 const glowVariants = {
   initial: { opacity: 0, scale: 0.8 },
-  hover: {
-    opacity: 1,
-    scale: 2,
-    transition: {
-      opacity: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
-      scale: { duration: 0.5, type: "spring", stiffness: 300, damping: 25 },
-    },
-  },
+  hover: { opacity: 1, scale: 2 },
 };
 
 const navGlowVariants = {
   initial: { opacity: 0 },
-  hover: { opacity: 1, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } },
+  hover: { opacity: 1 },
 };
 
 const sharedTransition = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 100,
   damping: 20,
   duration: 0.5,
@@ -118,6 +111,7 @@ export function NavBar({ isMobile = false }: { isMobile?: boolean }) {
           isDarkTheme ? "via-blue-400/30 via-30%" : "via-blue-400/20 via-30%"
         )}
         variants={navGlowVariants}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       />
       <ul
         className={
@@ -138,6 +132,10 @@ export function NavBar({ isMobile = false }: { isMobile?: boolean }) {
                 <motion.div
                   className="absolute inset-0 z-0 pointer-events-none rounded-xl"
                   variants={glowVariants}
+                  transition={{
+                    opacity: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
+                    scale: { duration: 0.5, type: "spring", stiffness: 300, damping: 25 },
+                  }}
                   style={{ background: item.gradient }}
                 />
               )}
