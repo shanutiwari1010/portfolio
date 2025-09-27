@@ -30,13 +30,13 @@ const About = () => {
               <div className="relative aspect-square w-full max-w-xs mx-auto overflow-hidden rounded-lg bg-primary/10">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
-                    src="/assets/profile.jpeg"
+                    src="/assets/about-profile-pic.png"
                     fill
                     alt="Profile Picture"
                     priority
                     loading="eager"
                     objectFit="cover"
-                    className="object-[60%_75%]"
+                    className="object-[60%_75%] scale-138"
                   />
                 </div>
               </div>
@@ -57,7 +57,7 @@ const About = () => {
                 Shanu Tiwari
               </h2>
               <p className="mt-1 text-lg text-orange-500">
-                Software Engineer & Designer
+                Software Engineer - Frontend
               </p>
 
               <div className="mt-6 prose prose-gray dark:prose-invert space-y-3">

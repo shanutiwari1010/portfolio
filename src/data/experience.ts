@@ -5,7 +5,7 @@ export const EXPERIENCE_DATA: IExperience[] = [
     title: "Frontend Engineer",
     company: "Blursday AI",
     location: "Bangalore, India",
-    period: "November 2024 - February 2025",
+    period: "November 2024 - September 2025",
     description: [
       "Built a dashboard for the Brand Book Generator using Next.js and shadcn/ui, optimizing maintainability with type-safe reusable components and reducing development time by 30%.",
       "Implemented robust auth, including Google and OTP-based login using Firebase, React Hook Form, Zod, and Redux, enhancing error handling and session management with interceptors and Next.js server actions",
