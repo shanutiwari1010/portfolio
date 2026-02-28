@@ -5,128 +5,128 @@
   % License: MIT
   % -----------------------
 
-  \documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
-  \usepackage{latexsym}
-  \usepackage[empty]{fullpage}
-  \usepackage{titlesec}
-  \usepackage{marvosym}
-  \usepackage[usenames,dvipsnames]{color}
-  \usepackage{verbatim}
-  \usepackage{enumitem}
-  \usepackage[hidelinks]{hyperref}
-  \usepackage{fancyhdr}
-  \usepackage[english]{babel}
-  \usepackage{tabularx}
-  \usepackage{fontawesome5}
-  \usepackage{multicol}
-  \setlength{\multicolsep}{-3.0pt}
-  \setlength{\columnsep}{-1pt}
-  \input{glyphtounicode}
-  \usepackage{ragged2e}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{ragged2e}
 
-  \usepackage{xcolor}
-  \hypersetup{colorlinks,urlcolor=blue}
+\usepackage{xcolor}
+\hypersetup{colorlinks,urlcolor=blue}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
 
 
-  %----------FONT OPTIONS----------
-  % sans-serif
-  % \usepackage[sfdefault]{FiraSans}
-  % \usepackage[sfdefault]{roboto}
-  % \usepackage[sfdefault]{noto-sans}
-  % \usepackage[default]{sourcesanspro}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-  % serif
-  % \usepackage{CormorantGaramond}
-  \usepackage{charter}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.0in}
 
+\urlstyle{same}
 
-  \pagestyle{fancy}
-  \fancyhf{} % clear all header and footer fields
-  \fancyfoot{}
-  \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{0pt}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-  % Adjust margins
-  \addtolength{\oddsidemargin}{-0.7in}
-  \addtolength{\evensidemargin}{-0.7in}
-  \addtolength{\textwidth}{1in}
-  \addtolength{\topmargin}{-.7in}
-  \addtolength{\textheight}{1.0in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-  \urlstyle{same}
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-  \raggedbottom
-  \raggedright
-  \setlength{\tabcolsep}{0in}
-
-  % Sections formatting
-  \titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\large
-  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-  % Ensure that generate pdf is machine readable/ATS parsable
-  \pdfgentounicode=1
 
   %-------------------------
   % Custom commands
   \newcommand{\resumeItem}[1]{
     \item\small{
-      {#1 \vspace{-2pt}}
+      {#1 \vspace{-1pt}}
     }
   }
-  \hypersetup{%
-    colorlinks=true,% hyperlinks will be colored
-    linkcolor=blue,% hyperlink text will be green
-    linkbordercolor=blue,% hyperlink border will be red
-  }
-
-  \newcommand{\resumeSubheading}[4]{
-    \vspace{-2pt}\item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        {#1} & #2 \\
-        \textit{\small#3} & \textit{\small #4}\\
-      \end{tabular*}\vspace{-7pt}
-  }
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
+}
 
   \newcommand{\resumeCertheading}[2]{
     \vspace{5pt}\item
       \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
         {#1} & #2 \\
-      \end{tabular*}\vspace{-7pt}
+      \end{tabular*}\vspace{-5pt}
   }
 
-  \newcommand{\resumeEduheading}[5]{
-    \vspace{2pt}\item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        {#1} & #2 \\
-        \textit{\small#3} & \textit{\small #4}\\
-        \textit{\small#5} \\
-      \end{tabular*}\vspace{-7pt}
-  }
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-  \newcommand{\resumeSubSubheading}[2]{
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textit{\small#1} & \textit{\small #2} \\
-      \end{tabular*}\vspace{-7pt}
-  }
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-  \newcommand{\resumeProjectHeading}[2]{
-      \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \small#1 & #2 \\
-      \end{tabular*}\vspace{-7pt}
-  }
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeEduheading}[4]{
+\vspace{2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    {#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4}\\
+    % \textit{\small#5} \\
+  \end{tabular*}\vspace{-5pt}
+}
 
-  \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-  \newcommand{\resumeItemListStart}{\begin{itemize}}
-  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
 
   %-------------------------------------------
   %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,16 +137,16 @@
 %----------HEADING----------
 
 \begin{center}
-  \textbf{\Huge \scshape Shanu Tiwari} \\ \vspace{1pt}
+  \textbf{\Huge \scshape Shanu Tiwari} \\ \vspace{5pt}
   \href{tel:7879810036}{+91 7879810036} $|$
-  {Pune, India} $|$
+  {Bangalore, India} $|$
   {Software Engineer} $|$
   \href{mailto:shanutiwari.work@gmail.com}{shanutiwari.work@gmail.com} \\ \vspace{1pt}
 
   \href{https://linkedin.com/in/shanutiwari1010}{\underline{linkedin.com/in/shanutiwari1010}} $|$
   \href{https://github.com/shanutiwari1010}{\underline{github.com/shanutiwari1010}} $|$
   \href{https://twitter.com/shanutiwari1010}{\underline{twitter.com/shanutiwari1010}}$|$
-   \href{https://shanutiwari.com/}{\underline{shanutiwari.com}} 
+   \href{https://shanutiwari.in}{\underline{shanutiwari.in}} 
   
 \end{center}
 
@@ -165,23 +165,6 @@
         }}
 \end{itemize}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Medi-Caps University -- Indore, Madhya Pradesh}{CGPA: 8.7/10}
-  {Bachelor of Technology in Computer Science and Engineering}{August 2020 -- July 2024}
-\resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-\resumeSubheading
-  {Sanskar Academy, CBSE -- Pachore, Madhya Pradesh}{Percentage: 87\%}
-  {12th, Mathematics}{April 2018 -- July 2020}
-
-\resumeSubHeadingListEnd
-
-
 
 % ---------- EXPERIENCE ----------
 
@@ -189,14 +172,28 @@
 
 \resumeSubHeadingListStart
 \resumeSubheading
-{\textbf{\href{https://www.blursday.ai/}{Blursday}\hspace{5pt}}{{[NextJS, ReactJS, TypeScript]}}}{(Remote) Bangalore, India}
+{\textbf{\href{https://datanimbus.com}{DataNimbus}\hspace{5pt}}{{}}}{(Hybrid) Bangalore, India}
+{\textbf{Software Engineer – Full time}}{November 2025 - Present}
+\resumeItemListStart
+\resumeItem{Developed a Senior Management dashboard with interactive tables and global filters to streamline data analysis and reporting.
+}
+\resumeItem{Implemented centralized theming with dynamic primary colors, improving UI scalability and reducing styling inconsistencies.
+}
+\resumeItem{Resolved UI bugs and layout issues across modules, improving application stability and ensuring consistent user experience.
+}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{\textbf{\href{https://blursday.ai}{Blursday}\hspace{5pt}}{{}}}{(Remote) Bangalore, India}
 {\textbf{Frontend Engineer – Full time}}{November 2024 - September 2025}
 \resumeItemListStart
-\resumeItem{Developed a dashboard for the Brand Book Generator using Next.js and shadcn/ui, reducing development time by 30\% with reusable, type-safe components.
+\resumeItem{Architected the Brand Book Generator dashboard, increasing asset creation speed by 25\% through modular, reusable UI design.
 }
-\resumeItem{Established secure authentication with Google OAuth and OTP via Firebase, cutting login errors by 45\% and improving session security for 10K+ users.
+\resumeItem{Designed and integrated Google OAuth and OTP-based authentication, enhancing access control and improving login stability.
 }
-\resumeItem{Optimized Figma/Canva plugins with better API integration and UI/UX, achieving 40\% faster load times and identifying 3 critical bottlenecks via Google Analytics and Datadog.
+\resumeItem{Optimized Figma/Canva plugin performance via API and UI refinements, reducing load times and eliminating key bottlenecks.
 }
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -204,12 +201,12 @@
 
 \resumeSubHeadingListStart
 \resumeSubheading
-  {\textbf{\href{https://www.techlene.com/}{Techlene Software Solutions}\hspace{5pt}}{[JavaScript, ReactJS, ApexCharts, Shadcn UI]}}{(On-site) Indore, India}
+  {\textbf{\href{https://techlene.com}{Techlene Software Solutions}\hspace{5pt}}{}}{(On-site) Indore, India}
   {\textbf{Software Development Engineer – Full time}}{March 2024 -- November 2024}
   \resumeItemListStart
     \resumeItem{Built an IoT platform with WebSockets for real-time data, reduced delays by 30\% and enhanced user experience and interaction.}
     \resumeItem{Optimized app performance by 25\% using Shadcn, Redux, and React Query for better state management and faster load times.}
-    \resumeItem{Architected a custom JSON parser and integrated interactive mapping features with Leaflet, improving user engagement by 20\%.}
+    \resumeItem{Architected a custom JSON parser and integrated interactive mapping features with Leaflet, improving user engagement by 20\%}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -220,16 +217,6 @@
 
 %-----------PROJECTS-----------
 \section{Projects}
-
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\href{https://github.com/shanutiwari1010/genie-ai}{Genie-AI}\hspace{5pt}}{{[Next.js, React Hook Form, Zod, Tailwind]}}}{}
-\resumeItemListStart
-  \resumeItem{Engineered a responsive AI chat app with OTP login and country selector, achieving 90\%+ form accuracy using React Hook Form and Zod.}
-  \resumeItem{Implemented image upload, infinite scroll, and typing indicators with skeleton loaders, reducing perceived latency by 40\%.}
-  \resumeItem{Added dark mode, message copy, and localStorage persistence; deployed on Vercel with full state retention across devices.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
 
 \resumeSubHeadingListStart
 \resumeProjectHeading
@@ -254,6 +241,23 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Medi-Caps University -- Indore, Madhya Pradesh}{CGPA: 8.7/10}
+  {Bachelor of Technology in Computer Science and Engineering}{August 2020 -- July 2024}
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Sanskar Academy, CBSE -- Pachore, Madhya Pradesh}{Percentage: 87\%}
+  {12th, Mathematics}{April 2018 -- July 2020}
+
+\resumeSubHeadingListEnd
 
 
 %-----------TRAININGS/CERTIFICATIONS-----------
