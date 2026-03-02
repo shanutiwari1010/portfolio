@@ -1,7 +1,7 @@
-  % -----------------------
+% -----------------------
   % Resume in Latex
   % Author: Shanu Tiwari
-  % Based off of: https://github.com/shanutiwari1010/portfolio
+  % Based on: https://github.com/shanutiwari1010/portfolio
   % License: MIT
   % -----------------------
 
@@ -61,7 +61,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-5.4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generated pdf is machine readable/ATS parsable
@@ -82,12 +82,21 @@
   citecolor=black
 }
 
-  \newcommand{\resumeCertheading}[2]{
-    \vspace{5pt}\item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        {#1} & #2 \\
-      \end{tabular*}\vspace{-5pt}
-  }
+\newcommand{\resumeCertheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeEduheading}[6]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
 \newcommand{\resumeSubheading}[4]{
   \item
@@ -111,15 +120,6 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeEduheading}[4]{
-\vspace{2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    {#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4}\\
-    % \textit{\small#5} \\
-  \end{tabular*}\vspace{-5pt}
-}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -127,17 +127,14 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-
-  %-------------------------------------------
-  %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-------------------------------------------
+%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING----------
-
+%---------------   HEADING   ---------------
 \begin{center}
-  \textbf{\Huge \scshape Shanu Tiwari} \\ \vspace{5pt}
+  \textbf{\Huge \scshape \href{https://shanutiwari.in}{Shanu Tiwari}} \\ \vspace{5pt}
   \href{tel:7879810036}{+91 7879810036} $|$
   {Bangalore, India} $|$
   {Software Engineer} $|$
@@ -145,14 +142,22 @@
 
   \href{https://linkedin.com/in/shanutiwari1010}{\underline{linkedin.com/in/shanutiwari1010}} $|$
   \href{https://github.com/shanutiwari1010}{\underline{github.com/shanutiwari1010}} $|$
-  \href{https://twitter.com/shanutiwari1010}{\underline{twitter.com/shanutiwari1010}}$|$
+  \href{https://twitter.com/shanutiwari1010}{\underline{x.com/shanutiwari1010}}$|$
    \href{https://shanutiwari.in}{\underline{shanutiwari.in}} 
   
 \end{center}
+%------------------ X-X-X ------------------
 
 
 
-%-----------PROGRAMMING SKILLS-----------
+%---------------   SUMMARY   ---------------
+\section{Professional Summary}
+Software Engineer with 2+ years of experience building scalable, high-performance React and Next.js applications. Proven in optimizing frontend performance by 45\%, streamlining API workflows, delivering modular, production-ready UI systems.
+%------------------ X-X-X ------------------
+
+
+
+%---------   PROGRAMMING SKILLS   ---------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
@@ -164,10 +169,11 @@
         \vspace{3pt}\textbf{AI/Others}{: \hfill LLM's, RAG, MCP, SSE, WebSockets, REST APIs, Scrum and Agile Collaboration, Context API \hfill} \\
         }}
 \end{itemize}
+%------------------ X-X-X ------------------
 
 
-% ---------- EXPERIENCE ----------
 
+%-------------   EXPERIENCE   --------------
 \section{Experience}
 
 \resumeSubHeadingListStart
@@ -175,11 +181,11 @@
 {\textbf{\href{https://datanimbus.com}{DataNimbus}\hspace{5pt}}{{}}}{(Hybrid) Bangalore, India}
 {\textbf{Software Engineer – Full time}}{November 2025 - Present}
 \resumeItemListStart
-\resumeItem{Developed a Senior Management dashboard with interactive tables and global filters to streamline data analysis and reporting.
+\resumeItem{Delivered enterprise-grade Senior Management dashboard with tabbed transactions and deal limits, boosting efficiency by 35\%
 }
-\resumeItem{Implemented centralized theming with dynamic primary colors, improving UI scalability and reducing styling inconsistencies.
+\resumeItem{Optimized frontend tables, Redux state \& backend API calls, cutting dashboard load times 40\% and preventing duplicate fetches
 }
-\resumeItem{Resolved UI bugs and layout issues across modules, improving application stability and ensuring consistent user experience.
+\resumeItem{Implemented centralized theming with dynamic styles and utilities, fixed UI bugs and ensured consistent UI across 15+ modules
 }
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -205,26 +211,24 @@
   {\textbf{Software Development Engineer – Full time}}{March 2024 -- November 2024}
   \resumeItemListStart
     \resumeItem{Built an IoT platform with WebSockets for real-time data, reduced delays by 30\% and enhanced user experience and interaction.}
-    \resumeItem{Optimized app performance by 25\% using Shadcn, Redux, and React Query for better state management and faster load times.}
-    \resumeItem{Architected a custom JSON parser and integrated interactive mapping features with Leaflet, improving user engagement by 20\%}
+    \resumeItem{Accelerated app performance by 25\% using Shadcn, Redux, and React Query for better state management and faster load times.}
+    \resumeItem{Designed a custom JSON parser and integrated interactive mapping features with Leaflet, improving user engagement by 20\%.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
-
-
-% ------------------------
+%------------------ X-X-X ------------------
 
 
 
-%-----------PROJECTS-----------
+%--------------   PROJECTS   ---------------
 \section{Projects}
 
 \resumeSubHeadingListStart
 \resumeProjectHeading
 {\textbf{\href{https://github.com/shanutiwari1010/latency-topology-visualizer}{Latency Topology Visualizer}\hspace{5pt}}{{[Next.js, Three.js, TypeScript, Mapbox ]}}}{}
 \resumeItemListStart
-  \resumeItem{Designed 3D latency map with Three.js to visualize 50+ exchange servers across AWS/GCP/Azure, updating every 8s.}
-  \resumeItem{Delivered interactive time-series charts for 15+ pairs, reducing lookup time by 60\% via debounced search and caching.}
-  \resumeItem{Boosted rendering performance by 45\% via frustum culling and LOD, achieving 60 FPS on desktop and 40+ FPS on mobile.
+  \resumeItem{Built 3D latency map to visualize 50+ exchange servers across AWS/GCP/Azure, updating every 8s for real-time monitoring.}
+  \resumeItem{Delivered interactive time-series charts for 15+ crypto pairs, cutting data lookup time by 60\% via debounced search and caching}
+  \resumeItem{Boosted rendering performance 45\% using frustum culling and LOD, achieving 60 FPS desktop and 40+ FPS mobile experience
 }
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -235,63 +239,56 @@
 {Reelify}\hspace{5pt}}{[Next.js, MongoDB, NextAuth, imagekit.io, Tailwind CSS, DaisyUI]}}{}
 
 \resumeItemListStart
-  \resumeItem{Designed and developed a full-stack short video app with upload, like, and comment features, boosting engagement by 30\%.}
-  \resumeItem{Secured role based auth with NextAuth.js, reduced unauthorized access by 40\% and recovery requests by 10\%.}
-  \resumeItem{Crafted a responsive mobile-first UI with Tailwind and DaisyUI, increasing session length by 20\%.}
+  \resumeItem{Developed full-stack short video platform with upload, like, comment features, boosting engagement and platform usage by 30\%}
+  \resumeItem{Implemented role-based authentication with NextAuth, reducing unauthorized access 40\% and streamlining user recovery flows}
+  \resumeItem{Built responsive mobile-first UI with TailwindCSS/DaisyUI, improving session duration, usability, and cross-device consistency}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+%------------------ X-X-X ------------------
 
 
-
-%-----------EDUCATION-----------
+%--------------   EDUCATION   --------------
 \section{Education}
 \resumeSubHeadingListStart
 
-\resumeSubheading
-{Medi-Caps University -- Indore, Madhya Pradesh}{CGPA: 8.7/10}
-  {Bachelor of Technology in Computer Science and Engineering}{August 2020 -- July 2024}
+\resumeEduheading
+{\textbf{\href{https://medicaps.ac.in}{Medicaps University}}}{Indore, Madhya Pradesh, India}
+{Specialized in Data Science}{August 2020 -- July 2024}
+  {Bachelor of Technology in Computer Science and Engineering}{CGPA: 8.7/10}
+  
 \resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
-\resumeSubheading
-  {Sanskar Academy, CBSE -- Pachore, Madhya Pradesh}{Percentage: 87\%}
-  {12th, Mathematics}{April 2018 -- July 2020}
+% \resumeSubHeadingListStart
+% \resumeSubheading
+%   {Sanskar Academy, CBSE -- Pachore, Madhya Pradesh}{Percentage: 87\%}
+%   {12th, Mathematics}{April 2018 -- July 2020}
 
-\resumeSubHeadingListEnd
+% \resumeSubHeadingListEnd
+%------------------ X-X-X ------------------
 
 
-%-----------TRAININGS/CERTIFICATIONS-----------
+%-------  TRAININGS/CERTIFICATIONS   -------
 \section{Trainings/Certifications}
 \resumeSubHeadingListStart
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
 \resumeCertheading
 {\textbf{\href{https://medicaps.ac.in/}{Industrial Training in Machine Learning}}}{Medicaps University, Indore}
 \resumeItemListStart
-\resumeItem{Completed 6-week Data Science training at Medicaps University, focused on Python, statistics and machine learning}
-\resumeItem{Created an MNIST digit recognition model using logistic regression and statistical analysis.}
+\resumeItem{Completed intensive 6-week Data Science training in Python, statistics, data preprocessing, supervised ML and model evaluation}
+\resumeItem{Developed and evaluated an MNIST digit classifier using logistic regression, applying statistical analysis and performance metrics}
 \resumeItemListEnd
-
-
 
 \resumeCertheading
 {\textbf{\href{https://coursera.org/verify/FHDUZAK7YL3Q}{Crash Course on Python}\hspace{3pt}}{{}}}{Coursera}
 \resumeItemListStart
-\resumeItem{Gained hands-on experience in Python, data structures, and object-oriented concepts through project-based learning.}
+\resumeItem{Developed strong foundations in Python, data structures, functions, and object oriented programming through hands on projects}
 
-\resumeItem{Applied Python and ML concepts to build real world models in personal projects to enhance practical skills.}
+\resumeItem{Implemented Python based programs to solve algorithmic problems, reinforcing logical thinking and structured coding practices}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
-
+%------------------ X-X-X ------------------
 
 
 
 \end{document}
+%------------------ X-X-X ------------------
