@@ -2,6 +2,24 @@ import { IExperience } from "@/types/experience";
 
 export const EXPERIENCE_DATA: IExperience[] = [
   {
+    title: "Software Engineer",
+    company: "DataNimbus",
+    location: "Bangalore, India (Hybrid)",
+    period: "November 2025 - Present",
+    description: [
+      "Delivered enterprise-grade Senior Management dashboard with tabbed transactions and deal limits, boosting efficiency by 35%",
+      "Optimized frontend tables, Redux state & backend API calls, cutting dashboard load times 40% and preventing duplicate fetches",
+      "Implemented centralized theming with dynamic styles and utilities, fixed UI bugs and ensured consistent UI across 15+ modules",
+    ],
+    skills: [
+      "React",
+      "Redux",
+      "TypeScript",
+      "RESTful APIs",
+      "UI/UX",
+    ],
+  },
+  {
     title: "Frontend Engineer",
     company: "Blursday AI",
     location: "Bangalore, India",
