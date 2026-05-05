@@ -1,0 +1,45 @@
+---
+description: Next.js 16 App Router & React 19 conventions
+globs: src/app/**/*.{ts,tsx},src/components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js App Router Conventions
+
+## Server vs Client Components
+
+- **Default to Server Components.** Only add `"use client"` when the file actually needs:
+  - React hooks (`useState`, `useEffect`, `useRef`, …)
+  - Browser APIs (`window`, `localStorage`, `IntersectionObserver`, …)
+  - Event handlers attached to DOM elements
+  - `motion/react` (which is client-only)
+
+- Never mark `layout.tsx` or `page.tsx` as a Client Component unless unavoidable. Push the boundary into a leaf component instead.
+
+```tsx
+// ✅ Server-rendered page composes a client island
+// app/(root)/page.tsx
+import HeroSection from "@/components/sections/hero-section"; // "use client" lives there
+
+export default function Home() {
+  return <HeroSection />;
+}
+```
+
+## Metadata
+
+Define `metadata` and `viewport` exports per route. Use the `Metadata` and `Viewport` types. The root metadata is in `src/app/layout.tsx`; per-route titles are templated via the `template` field.
+
+## Images
+
+`next/image` with `images.unoptimized: true` is currently set in `next.config.js`. When adding remote sources, extend the existing `remotePatterns` list — don't disable security checks.
+
+## Fonts
+
+Loaded via `next/font/google` in `layout.tsx`. To add a font, declare it there and expose it via a CSS variable (e.g. `--font-foo`) so it can be referenced from Tailwind.
+
+## React 19 specifics
+
+- `forwardRef` is **no longer needed** for new components — accept `ref` as a regular prop.
+- `useFormStatus`, `useActionState`, and the `use()` hook are available; prefer them for form state when the form is server-action driven.
+- Keep existing shadcn components on `forwardRef` (they're vendored and should mirror the registry).

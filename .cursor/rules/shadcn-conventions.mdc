@@ -1,0 +1,46 @@
+---
+description: shadcn/ui usage, vendoring rules, and the CLI workflow
+globs: src/components/ui/**/*.{ts,tsx},components.json
+alwaysApply: false
+---
+
+# shadcn/ui Conventions
+
+This project uses the **`new-york`** style with the **`zinc`** base colour and **`lucide`** icon library. Configuration lives in `components.json`.
+
+## Vendored, not customised
+
+Treat every file in `src/components/ui/*` as **vendored from the shadcn registry**:
+
+- ❌ Do **not** restructure the file (rename exports, change component shape, etc.).
+- ✅ You may apply small, surgical Tailwind class tweaks for the project's design language, but leave the API intact.
+- ✅ Custom UI helpers belong **outside** `ui/` — e.g. `src/components/ui/comet-card.tsx` is OK because it's clearly project-specific, but new utility components should be placed in `src/components/` instead.
+
+## CLI workflow
+
+```bash
+# Add a new primitive
+npx shadcn@latest add <name>
+
+# Re-sync local components against registry (overwrites!)
+npx shadcn@latest add <name> --overwrite
+
+# Check for upstream updates
+npx shadcn@latest diff
+```
+
+Always run `npm run lint && npm run typecheck && npm run build` after running the CLI.
+
+## When asked to add a new primitive
+
+1. Run `npx shadcn@latest add <name>` — this will install required Radix peers automatically.
+2. Verify the new file ended up in `src/components/ui/`.
+3. If the CLI asks about overrides for `tailwind.config`, choose the option that **does not** create one — Tailwind v4 in this project is CSS-only via `src/app/globals.css`.
+
+## Forms
+
+When using shadcn's `Form` primitive, pair with `react-hook-form` + `zod` (v3) + `@hookform/resolvers/zod`. See `src/app/(root)/contact/page.tsx` for the canonical pattern.
+
+## Future migration to `new-york-v4`
+
+The current style key is `new-york`. The newer `new-york-v4` style uses OKLCH tokens and `data-slot` attributes, which would also require migrating `src/app/globals.css` from HSL-based tokens. **Do not undertake this migration piecemeal** — it's an all-or-nothing change.

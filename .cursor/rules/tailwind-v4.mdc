@@ -1,0 +1,63 @@
+---
+description: Tailwind CSS v4 (CSS-only config) conventions for this project
+globs: src/**/*.{ts,tsx,css}
+alwaysApply: false
+---
+
+# Tailwind CSS v4
+
+Tailwind is configured **exclusively in `src/app/globals.css`** via `@theme`, `@plugin`, and `@custom-variant` directives. There is **no `tailwind.config.ts`** and there should never be one.
+
+## Adding design tokens
+
+Tokens are HSL-based CSS variables under `:root` and `.dark`, then mapped to Tailwind utility tokens inside `@theme`:
+
+```css
+:root {
+  --background: 0 0% 100%;
+}
+
+@theme {
+  --color-background: hsl(var(--background));
+}
+```
+
+This makes `bg-background`, `text-background`, `border-background`, etc. available everywhere.
+
+## Using tokens in components
+
+```tsx
+// ✅ DO — semantic tokens
+<div className="bg-background text-foreground border border-border" />
+<p className="text-muted-foreground" />
+
+// ❌ DO NOT — hard-coded colours
+<div className="bg-[#fff] text-[#000]" />
+```
+
+## Animations
+
+Add keyframes inside `@theme` and reference via `--animate-*` tokens:
+
+```css
+@theme {
+  --animate-shiny-text: shiny-text 8s infinite;
+  @keyframes shiny-text { /* ... */ }
+}
+```
+
+Then use `animate-shiny-text` as a class.
+
+## Conditional classes
+
+Always use `cn()` from `@/lib/utils`:
+
+```tsx
+import { cn } from "@/lib/utils";
+
+<div className={cn("flex items-center", isActive && "text-primary", className)} />
+```
+
+## Plugins
+
+`tailwindcss-animate` is enabled via `@plugin 'tailwindcss-animate';` in `globals.css`. Don't add new plugins without updating that file.

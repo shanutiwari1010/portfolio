@@ -1,0 +1,47 @@
+---
+description: Dependency policy — what we use, what we avoid, and known traps
+alwaysApply: true
+---
+
+# Dependency Policy
+
+## Single-source rules
+
+| Concern   | Use                                | Don't use                          |
+|-----------|------------------------------------|------------------------------------|
+| Animation | `motion/react`                     | `framer-motion` (removed)          |
+| Forms     | `react-hook-form` + `zod` v3       | `zod` v4 (breaking)                |
+| Icons     | `lucide-react` 0.x + `react-icons` | `lucide-react` 1.x (no brand icons)|
+| Linting   | `eslint` 9.x flat config           | `eslint` 10.x (plugin gap)         |
+| Styling   | Tailwind v4 (CSS-only)             | `tailwind.config.ts`               |
+
+## Pinned-back versions and why
+
+These are intentional ceilings — bumping them will break the build:
+
+- **`lucide-react` < 1.0.0** — `1.x` removed brand icons (`Github`, `Linkedin`, …) used in `src/data/links.ts`.
+- **`eslint` < 10.0.0** — `eslint-plugin-react` (transitive via `eslint-config-next`) doesn't yet support the v10 rule context API.
+- **`zod` < 4.0.0** — v4 is a breaking refactor; would require `@hookform/resolvers` + form rewrites.
+- **`typescript` < 6.0.0** — keep on the `5.9.x` stable line until the Next.js team ships official compat notes for 6.x.
+
+When the upstream blockers clear, bump these and re-run the verification flow.
+
+## When adding a new dependency
+
+1. Prefer a package that's already installed (check `package.json` first).
+2. Use `npm install <pkg>` — never edit `package.json` and skip the install step.
+3. Check `npm audit` afterwards. The 4 moderate findings inside Next's bundled `postcss` are upstream and expected — anything else needs to be addressed.
+4. Run the verification flow: `npm run lint && npm run typecheck && npm run build`.
+
+## When removing a dependency
+
+1. Search for **all** import paths first (`from "<pkg>"` and `from "<pkg>/<subpath>"`).
+2. Migrate the call sites before uninstalling.
+3. `npm uninstall <pkg>`.
+4. Verify with the full flow.
+
+## Known suspicious / unused deps (reconsider on next sweep)
+
+The following are installed but currently have **zero direct imports** in `src/`. Either remove them or wire them into a feature:
+
+`@tsparticles/engine`, `@tsparticles/react`, `@tsparticles/slim`, `embla-carousel-react`, `recharts`, `cmdk`, `vaul`, `input-otp`, `react-resizable-panels`, `satori`, `date-fns`, `remixicon`, plus most `@radix-ui/react-*` packages whose corresponding shadcn primitive is unused (see `AGENTS.md` for the latest unused-component list).

@@ -1,0 +1,45 @@
+---
+description: TypeScript/React code-style conventions enforced in this project
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Code Style
+
+## Imports
+
+- Always use the `@/*` path alias for cross-folder imports.
+- Order: `react`/`next` → third-party → `@/...` → relative.
+- No default-export-only modules unless required by Next.js (pages, layouts, route handlers).
+
+```ts
+// ✅
+import { useEffect } from "react";
+import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+```
+
+## Naming
+
+- Components: `PascalCase` (file + export).
+- Hooks: `useThing.ts` returning camelCase API.
+- Constants: `SCREAMING_SNAKE_CASE` and live under `src/constants/` or `src/data/`.
+- Types/Interfaces: `PascalCase`, prefer `type` aliases over `interface` unless declaration merging is needed.
+
+## Components
+
+- Functional components only. Keep them small; extract sub-components when they exceed ~150 lines.
+- Server-by-default, client only when needed (see `nextjs-app-router` rule).
+- Do **not** add comments that just narrate the code (`// import x`, `// return jsx`). Comments should explain non-obvious intent only.
+
+## Utilities
+
+- `cn()` from `@/lib/utils` is the **only** way to compose conditional Tailwind classes.
+- Reusable hooks live in `src/hooks/`, not inline.
+
+## Type safety
+
+- No `any` in app code (`src/app/`, `src/components/sections/`, `src/components/*.tsx`).
+- `any` is tolerated inside `src/components/ui/*` (vendored shadcn) only.
+- Don't use `// @ts-ignore` — use `// @ts-expect-error` with a one-line explanation when truly necessary.

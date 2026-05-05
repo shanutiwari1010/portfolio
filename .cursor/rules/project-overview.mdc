@@ -1,0 +1,36 @@
+---
+description: Always-on project context (stack, layout, package manager, verification flow)
+alwaysApply: true
+---
+
+# Portfolio · Project Overview
+
+**Stack**: Next.js 16 (App Router, Turbopack) · React 19 · TypeScript 5.9 · Tailwind v4 (CSS-only config) · shadcn/ui `new-york` · `motion/react` for animation.
+
+**Package manager**: `npm` only. Lockfile is `package-lock.json`. Do not introduce `yarn.lock`, `pnpm-lock.yaml`, or `bun.lock`.
+
+## Layout
+
+- `src/app/` — App Router. RSCs by default. Route groups under `(root)`.
+- `src/components/ui/` — shadcn primitives. Treat as **vendored**; keep diffs minimal.
+- `src/components/sections/` — page-level composed sections.
+- `src/components/*.tsx` — app-specific shared components.
+- `src/lib/utils.ts` — `cn()` lives here. Always use it for conditional classes.
+- `src/app/globals.css` — Tailwind v4 + design tokens. **There is no `tailwind.config.ts`.**
+
+## Always after substantive changes
+
+```bash
+npm run lint && npm run typecheck && npm run build
+```
+
+If any of these fail, fix them before declaring the task done.
+
+## Hard "don'ts"
+
+- ❌ `import { motion } from "framer-motion"` → use `"motion/react"`.
+- ❌ Adding a `tailwind.config.ts` — Tailwind v4 is configured via CSS in `globals.css`.
+- ❌ Bumping `zod` to v4 without an explicit migration plan.
+- ❌ Bumping `lucide-react` to `1.x` (brand icons removed; would break `src/data/links.ts`).
+- ❌ Bumping `eslint` to `10.x` (incompatible with `eslint-plugin-react` shipped by `eslint-config-next`).
+- ❌ Using `next lint` — it was removed in Next 16. Use `eslint .`.
