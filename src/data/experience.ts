@@ -5,7 +5,7 @@ export const EXPERIENCE_DATA: IExperience[] = [
     title: "Software Engineer",
     company: "DataNimbus",
     location: "Bangalore, India (Hybrid)",
-    period: "November 2025 - Present",
+    period: "November 2025 - March 2026",
     description: [
       "Delivered enterprise-grade Senior Management dashboard with tabbed transactions and deal limits, boosting efficiency by 35%",
       "Optimized frontend tables, Redux state & backend API calls, cutting dashboard load times 40% and preventing duplicate fetches",
