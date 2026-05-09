@@ -10,15 +10,15 @@ Tailwind is configured **exclusively in `src/app/globals.css`** via `@theme`, `@
 
 ## Adding design tokens
 
-Tokens are HSL-based CSS variables under `:root` and `.dark`, then mapped to Tailwind utility tokens inside `@theme`:
+Tokens are OKLCH-based CSS variables under `:root` and `.dark`, then mapped to Tailwind utility tokens inside `@theme inline`:
 
 ```css
 :root {
-  --background: 0 0% 100%;
+  --background: oklch(1 0 0);
 }
 
-@theme {
-  --color-background: hsl(var(--background));
+@theme inline {
+  --color-background: var(--background);
 }
 ```
 
@@ -60,4 +60,4 @@ import { cn } from "@/lib/utils";
 
 ## Plugins
 
-`tailwindcss-animate` is enabled via `@plugin 'tailwindcss-animate';` in `globals.css`. Don't add new plugins without updating that file.
+`tw-animate-css` is enabled via `@import "tw-animate-css";` in `globals.css`, and the shadcn preset utilities ship through `@import "shadcn/tailwind.css";`. Don't add new plugins without updating that file.
