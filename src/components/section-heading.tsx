@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import AccentText from "./accent-text";
 import { cn } from "@/lib/utils";
 

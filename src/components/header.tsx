@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 import { ExternalLink, Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -28,21 +28,21 @@ const Header = () => {
   const borderOpacity = useTransform(scrollY, [0, 100], [0, 1]);
   const borderBottomColor = useTransform(
     borderOpacity,
-    (opacity) => theme === "light" && `rgba(234, 234, 234, ${opacity})`
+    (opacity) => theme === "light" && `rgba(234, 234, 234, ${opacity})`,
   );
   const darkBorderBottomColor = useTransform(
     borderOpacity,
-    (opacity) => theme === "dark" && `rgba(25, 25, 25, ${opacity})`
+    (opacity) => theme === "dark" && `rgba(25, 25, 25, ${opacity})`,
   );
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"]
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"],
   );
   const darkBackgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(17, 17, 17, 0)", "rgba(17, 17, 17, 0.8)"]
+    ["rgba(17, 17, 17, 0)", "rgba(17, 17, 17, 0.8)"],
   );
 
   useEffect(() => {
@@ -50,9 +50,8 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-  setMobileOpen(false);
-}, [pathname]);
-
+    setMobileOpen(false);
+  }, [pathname]);
 
   if (!mounted) return null;
 
@@ -75,12 +74,13 @@ const Header = () => {
       >
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" aria-label="Home" className="shrink-0">
             <Image
               src="/brand/logo.svg"
-              alt="Logo"
+              alt="Shanu Tiwari logo"
               width={100}
               height={100}
+              className="h-auto w-24"
               priority
             />
           </Link>
@@ -94,7 +94,7 @@ const Header = () => {
               className={cn(
                 "h-9 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground",
                 "shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1",
-                "focus-visible:ring-primary"
+                "focus-visible:ring-primary",
               )}
             >
               Resume

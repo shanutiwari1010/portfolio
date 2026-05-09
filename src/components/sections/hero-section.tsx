@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { memo, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRightIcon, BriefcaseBusiness, ExternalLink } from "lucide-react";
 
 import { SOCIAL_URLS } from "@/constants";

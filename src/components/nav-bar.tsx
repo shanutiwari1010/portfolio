@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type * as React from "react";
 import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Home, User, FolderKanban, Briefcase, ScrollText } from "lucide-react";
 import { cn } from "@/lib/utils";
 
