@@ -1,13 +1,21 @@
-import Head from "next/head";
 import type { Metadata, Viewport } from "next";
 import { Inter, Solitreo } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "./globals.css";
+
+const PRELOAD_IMAGES = [
+  { href: "/assets/selfie.jpg", type: "image/jpeg" },
+  { href: "/assets/laptop.jpg", type: "image/jpeg" },
+  { href: "/assets/mirrorselfie.jpg", type: "image/jpeg" },
+  { href: "/assets/sunkissed.jpeg", type: "image/jpeg" },
+  { href: "/assets/citypalace.jpeg", type: "image/jpeg" },
+];
 
 const inter = Inter({
   variable: "--font-inter",
@@ -98,38 +106,11 @@ export default function RootLayout({
       className={`${inter.variable} ${solitreo.variable}`}
       suppressHydrationWarning
     >
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/selfie.jpg"
-          as="image"
-          type="image/jpg"
-        />
-        <link
-          rel="preload"
-          href="/assets/laptop.jpg"
-          as="image"
-          type="image/jpg"
-        />
-        <link
-          rel="preload"
-          href="/assets/mirrorselfie.jpg"
-          as="image"
-          type="image/jpg"
-        />
-        <link
-          rel="preload"
-          href="/assets/sunkissed.jpeg"
-          as="image"
-          type="image/jpeg"
-        />
-        <link
-          rel="preload"
-          href="/assets/citypalace.jpeg"
-          as="image"
-          type="image/jpeg"
-        />
-      </Head>
+      <head>
+        {PRELOAD_IMAGES.map(({ href, type }) => (
+          <link key={href} rel="preload" as="image" href={href} type={type} />
+        ))}
+      </head>
       <body
         className="antialiased bg-background font-sans text-foreground"
         suppressHydrationWarning
@@ -140,10 +121,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="max-w-screen-xl mx-auto">{children}</main>
-          <Footer />
-          <Toaster />
+          <TooltipProvider delayDuration={200}>
+            <Header />
+            <main className="max-w-screen-xl mx-auto">{children}</main>
+            <Footer />
+            <Toaster />
+          </TooltipProvider>
         </ThemeProvider>
         <Analytics />
       </body>

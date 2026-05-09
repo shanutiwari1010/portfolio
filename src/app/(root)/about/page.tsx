@@ -34,9 +34,8 @@ const About = () => {
                     fill
                     alt="Profile Picture"
                     priority
-                    loading="eager"
-                    objectFit="cover"
-                    className="object-[60%_75%] scale-138"
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    className="object-cover object-[60%_75%] scale-138"
                   />
                 </div>
               </div>
