@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -8,7 +8,6 @@ import {
   useMotionValue,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
 export function Button({
@@ -33,8 +32,8 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-11 w-32 overflow-hidden bg-transparent p-[1px] text-xl",
-        containerClassName
+        "relative h-11 w-36 px-4 overflow-hidden bg-transparent p-[1px] text-xl",
+        containerClassName,
       )}
       style={{
         borderRadius: borderRadius,
@@ -49,7 +48,7 @@ export function Button({
           <div
             className={cn(
               "h-20 w-20 bg-[radial-gradient(#e9530e_40%,transparent_60%)] opacity-[0.8]",
-              borderClassName
+              borderClassName,
             )}
           />
         </MovingBorder>
@@ -58,7 +57,7 @@ export function Button({
       <div
         className={cn(
           "relative flex h-full w-full items-center justify-center border border-primary/10 text-sm text-white antialiased backdrop-blur-xl",
-          className
+          className,
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
@@ -96,11 +95,11 @@ export const MovingBorder = ({
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
+    (val) => pathRef.current?.getPointAtLength(val).x,
   );
   const y = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).y
+    (val) => pathRef.current?.getPointAtLength(val).y,
   );
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
